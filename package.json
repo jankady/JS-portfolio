@@ -1,4 +1,23 @@
 {
+  "name": "js-portfolio",
+  "version": "1.0.0",
+  "description": "Project for first year of bachelor degree. Using as my portfolio using js, html and css",
+  "homepage": "https://github.com/jankady/JS-portfolio#readme",
+  "bugs": {
+    "url": "https://github.com/jankady/JS-portfolio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jankady/JS-portfolio.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+  },
   "dependencies": {
     "@tailwindcss/cli": "^4.1.16",
     "tailwindcss": "^4.1.16"

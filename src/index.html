@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./output.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+    <title>Kaduch Jan | Main </title>
+</head>
+<body class="bg-background">
+
+<nav class="bg-background  border-primary">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16">
+            <div class="text-primary font-bold text-xl">
+                Jan Kaduch
+            </div>
+
+            <!-- Desktop menu  -->
+            <ul class="hidden md:flex gap-6 items-center text-secondary ">
+                <li><a href="index.html" class="hover:text-primary font-bold"><span class="text-primary ">#</span>Main
+                    page</a></li>
+                <li><a href="#" class="hover:text-primary"><span class="text-primary ">#</span>About me</a></li>
+                <li><a href="#" class="hover:text-primary"><span class="text-primary ">#</span>Projects</a></li>
+                <li>
+                    <!-- Theme Toggle Slider -->
+                    <div class="flex items-center gap-2">
+                        <span class="text-sm">☀️</span>
+                        <label class="relative inline-block w-14 h-7 cursor-pointer">
+                            <input type="checkbox" id="theme-toggle" class="sr-only peer">
+                            <div class="w-full h-full bg-gray-400 peer-focus:outline-none rounded-full peer peer-checked:bg-primary transition-all"></div>
+                            <div class="absolute top-0.5 left-0.5 bg-white w-6 h-6 rounded-full transition-all peer-checked:translate-x-7"></div>
+                        </label>
+                        <span class="text-sm">🌙</span>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- Hamburger menu-->
+            <div class="flex items-center justify-between">
+
+                <!-- slider-->
+                <div class="md:hidden flex items-center gap-2 py-2">
+                    <span class="text-sm">☀️</span>
+                    <label class="relative inline-block w-14 h-7 cursor-pointer">
+                        <input type="checkbox" id="theme-toggle-mobile" class="sr-only peer">
+                        <div class="w-full h-full bg-gray-400 peer-focus:outline-none rounded-full peer peer-checked:bg-primary transition-all"></div>
+                        <div class="absolute top-0.5 left-0.5 bg-white w-6 h-6 rounded-full transition-all peer-checked:translate-x-7"></div>
+                    </label>
+                    <span class="text-sm">🌙</span>
+                </div>
+
+                <button id="mobile-menu-button" class="md:hidden text-secondary">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
+            <ul class="flex flex-col gap-3 text-secondary text-2xl">
+                <li><a href="index.html" class="hover:text-primary font-bold"><span class="text-primary ">#</span>Main
+                    page</a></li>
+                <li><a href="#" class="hover:text-primary"><span class="text-primary ">#</span>About me</a></li>
+                <li><a href="#" class="hover:text-primary"><span class="text-primary ">#</span>Projects</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<header class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+    <div class="me-header">
+        <p class="text-secondary">I am an It student of bachelor degree on Banska University situaited in Ostrava</p>
+    </div>
+    <div class="header-information">
+
+    </div>
+</header>
+<main>
+
+    <div class="w-max">
+        <h1 class="animate-typing overflow-hidden whitespace-nowrap pr-5 font-bold text-secondary">
+            Hello World
+        </h1>
+    </div>
+    <h1 class="font-bold underline text-secondary">
+        Hello world!
+    </h1>
+
+
+    <p class=" text-secondary">negfggr</p>
+</main>
+<footer>
+    <p>k</p>
+</footer>
+
+<script src="../main.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #b63dd5;
+    --color-secondary: white;
+    --color-background: #282C33;
+
+}
+
+html.dark {
+    --color-primary: #b63dd5;
+    --color-secondary: white;
+    --color-background: #282C33;
+}
+html.light {
+    --color-primary: #c837ed;
+    --color-secondary: #000000;
+    --color-background: #e1e1e1;
+}
+
+
+/* Schovat checkbox vizuálně, ale zachovat pro accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Animace mobilního menu */
+#mobile-menu {
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+/* Vlastní animace pro Tailwind v4 */
+@keyframes typing {
+    0% {
+        width: 0%;
+        visibility: hidden;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: white;
+    }
+}
+
+@utility animate-typing {
+    animation: typing 2s steps(20) infinite alternate, blink 0.7s infinite;
+}
