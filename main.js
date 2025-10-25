@@ -15,7 +15,7 @@ if (mobileMenuButton && mobileMenu) {
     });
 }
 
-// Theme toggle - slider verze
+// Theme toggle - slider verze s ikonou
 function toggleTheme() {
     const html = document.documentElement;
     const isDark = html.classList.contains('dark');
@@ -25,12 +25,19 @@ function toggleTheme() {
     html.classList.add(newTheme);
     localStorage.setItem('theme', newTheme);
 
-    // Synchronizuj oba slidery (desktop + mobile)
+    // Synchronizuj oba slidery
     const desktopToggle = document.getElementById('theme-toggle');
     const mobileToggle = document.getElementById('theme-toggle-mobile');
 
+    // Změň ikony uvnitř slideru
+    const desktopIcon = document.querySelector('.theme-icon');
+    const mobileIcon = document.querySelector('.theme-icon-mobile');
+
     if (desktopToggle) desktopToggle.checked = (newTheme === 'dark');
     if (mobileToggle) mobileToggle.checked = (newTheme === 'dark');
+
+    if (desktopIcon) desktopIcon.textContent = (newTheme === 'dark') ? '🌙' : '☀️';
+    if (mobileIcon) mobileIcon.textContent = (newTheme === 'dark') ? '🌙' : '☀️';
 }
 
 // Event listeners pro oba slidery
@@ -40,8 +47,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
     const desktopToggle = document.getElementById('theme-toggle');
     const mobileToggle = document.getElementById('theme-toggle-mobile');
+    const desktopIcon = document.querySelector('.theme-icon');
+    const mobileIcon = document.querySelector('.theme-icon-mobile');
 
-    // Nastav správnou pozici slideru
+    // Nastav správnou pozici slideru a ikonu
     if (desktopToggle) {
         desktopToggle.checked = (savedTheme === 'dark');
         desktopToggle.addEventListener('change', toggleTheme);
@@ -51,4 +60,7 @@ window.addEventListener('DOMContentLoaded', () => {
         mobileToggle.checked = (savedTheme === 'dark');
         mobileToggle.addEventListener('change', toggleTheme);
     }
+
+    if (desktopIcon) desktopIcon.textContent = (savedTheme === 'dark') ? '🌙' : '☀️';
+    if (mobileIcon) mobileIcon.textContent = (savedTheme === 'dark') ? '🌙' : '☀️';
 });

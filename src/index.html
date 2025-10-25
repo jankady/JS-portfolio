@@ -13,44 +13,42 @@
     <div class="max-w-7xl mx-auto px-4">
         <div class="flex justify-between items-center h-16">
             <div class="text-primary font-bold text-xl">
-                Jan Kaduch
+                Jan
             </div>
 
             <!-- Desktop menu  -->
             <ul class="hidden md:flex gap-6 items-center text-secondary ">
                 <li><a href="index.html" class="hover:text-primary font-bold"><span class="text-primary ">#</span>Main
                     page</a></li>
-                <li><a href="#" class="hover:text-primary"><span class="text-primary ">#</span>About me</a></li>
-                <li><a href="#" class="hover:text-primary"><span class="text-primary ">#</span>Projects</a></li>
-                <li>
+                <li><a href="aboutme.html" class="hover:text-primary"><span class="text-primary ">#</span>About me</a></li>
+                <li><a href="projects.html" class="hover:text-primary"><span class="text-primary ">#</span>Projects</a></li>
+                <li class="ml-9">
                     <!-- Theme Toggle Slider -->
-                    <div class="flex items-center gap-2">
-                        <span class="text-sm">☀️</span>
-                        <label class="relative inline-block w-14 h-7 cursor-pointer">
-                            <input type="checkbox" id="theme-toggle" class="sr-only peer">
-                            <div class="w-full h-full bg-gray-400 peer-focus:outline-none rounded-full peer peer-checked:bg-primary transition-all"></div>
-                            <div class="absolute top-0.5 left-0.5 bg-white w-6 h-6 rounded-full transition-all peer-checked:translate-x-7"></div>
-                        </label>
-                        <span class="text-sm">🌙</span>
-                    </div>
+                    <label class="relative inline-block w-16 h-8 cursor-pointer">
+                        <input type="checkbox" id="theme-toggle" class="sr-only peer">
+                        <div class="w-full h-full bg-gray-400 rounded-full peer-checked:bg-primary transition-all"></div>
+                        <div class="absolute top-1 left-1 bg-white w-6 h-6 rounded-full transition-all peer-checked:translate-x-8 flex items-center justify-center text-xs">
+                            <span class="theme-icon">☀️</span>
+                        </div>
+                    </label>
                 </li>
             </ul>
 
             <!-- Hamburger menu-->
-            <div class="flex items-center justify-between">
+            <div class="flex justify-between">
 
                 <!-- slider-->
-                <div class="md:hidden flex items-center gap-2 py-2">
-                    <span class="text-sm">☀️</span>
-                    <label class="relative inline-block w-14 h-7 cursor-pointer">
+                <div class="md:hidden flex  gap-2 py-2 mr-5">
+                    <label class="relative inline-block w-16 h-8 cursor-pointer">
                         <input type="checkbox" id="theme-toggle-mobile" class="sr-only peer">
-                        <div class="w-full h-full bg-gray-400 peer-focus:outline-none rounded-full peer peer-checked:bg-primary transition-all"></div>
-                        <div class="absolute top-0.5 left-0.5 bg-white w-6 h-6 rounded-full transition-all peer-checked:translate-x-7"></div>
+                        <div class="w-full h-full bg-gray-400 rounded-full peer-checked:bg-primary transition-all"></div>
+                        <div class="absolute top-1 left-1 bg-white w-6 h-6 rounded-full transition-all peer-checked:translate-x-8 flex items-center justify-center text-xs">
+                            <span class="theme-icon-mobile">☀️</span>
+                        </div>
                     </label>
-                    <span class="text-sm">🌙</span>
                 </div>
 
-                <button id="mobile-menu-button" class="md:hidden text-secondary">
+                <button id="mobile-menu-button" class="md:hidden text-secondary ml-10">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                               d="M4 6h16M4 12h16M4 18h16"></path>
@@ -65,8 +63,8 @@
             <ul class="flex flex-col gap-3 text-secondary text-2xl">
                 <li><a href="index.html" class="hover:text-primary font-bold"><span class="text-primary ">#</span>Main
                     page</a></li>
-                <li><a href="#" class="hover:text-primary"><span class="text-primary ">#</span>About me</a></li>
-                <li><a href="#" class="hover:text-primary"><span class="text-primary ">#</span>Projects</a></li>
+                <li><a href="aboutme.html" class="hover:text-primary"><span class="text-primary ">#</span>About me</a></li>
+                <li><a href="projects.html" class="hover:text-primary"><span class="text-primary ">#</span>Projects</a></li>
             </ul>
         </div>
     </div>
@@ -92,10 +90,9 @@
     </h1>
 
 
-    <p class=" text-secondary">negfggr</p>
 </main>
 <footer>
-    <p>k</p>
+
 </footer>
 
 <script src="../main.js"></script>
