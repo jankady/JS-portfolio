@@ -20,8 +20,10 @@
             <ul class="hidden md:flex gap-6 items-center text-secondary ">
                 <li><a href="index.html" class="hover:text-primary font-bold"><span class="text-primary ">#</span>Main
                     page</a></li>
-                <li><a href="aboutme.html" class="hover:text-primary"><span class="text-primary ">#</span>About me</a></li>
-                <li><a href="projects.html" class="hover:text-primary"><span class="text-primary ">#</span>Projects</a></li>
+                <li><a href="aboutme.html" class="hover:text-primary"><span class="text-primary ">#</span>About me</a>
+                </li>
+                <li><a href="projects.html" class="hover:text-primary"><span class="text-primary ">#</span>Projects</a>
+                </li>
                 <li class="ml-9">
                     <!-- Theme Toggle Slider -->
                     <label class="relative inline-block w-16 h-8 cursor-pointer">
@@ -63,8 +65,10 @@
             <ul class="flex flex-col gap-3 text-secondary text-2xl">
                 <li><a href="index.html" class="hover:text-primary font-bold"><span class="text-primary ">#</span>Main
                     page</a></li>
-                <li><a href="aboutme.html" class="hover:text-primary"><span class="text-primary ">#</span>About me</a></li>
-                <li><a href="projects.html" class="hover:text-primary"><span class="text-primary ">#</span>Projects</a></li>
+                <li><a href="aboutme.html" class="hover:text-primary"><span class="text-primary ">#</span>About me</a>
+                </li>
+                <li><a href="projects.html" class="hover:text-primary"><span class="text-primary ">#</span>Projects</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -73,10 +77,14 @@
 <header class="grid sm:grid-cols-1 md:grid-cols-2 ">
 
     <div class="header-information">
-        <p class="text-secondary">I am an It student of bachelor degree on <span class="text-primary">Banska</span> University situated in Ostrava</p>
+        <h1 class="text-secondary text-3xl">I am an It student of bachelor degree on <span
+                class="text-primary">Banska</span> University situated in Ostrava</h1>
+        <p class="text-secondary">Interested in <span class="text-primary">cybersecurity</span>,
+            <span class="text-primary">full-stack developing</span> and <span class="text-primary">AI</span></p>
     </div>
 
     <div class="me-header">
+        <img src="../img/profile_picture.jpg" alt="my profile picture"/>
     </div>
 
 </header>
@@ -91,10 +99,87 @@
         Hello world!
     </h1>
 
+    <!-- Tailwind-only sections: Kontakt a Skilly -->
+    <section id="kontakt-skills" class="max-w-7xl mx-auto px-4 mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+
+
+
+        <!-- Skilly (Tailwind utilities only) -->
+        <article id="Skills"
+                 class="bg-gradient-to-b from-white/2 to-transparent border border-white/5 rounded-2xl p-6 shadow-lg">
+            <h3 class="text-xl font-semibold text-white">Skills</h3>
+            <p class="text-sm text-white/75 mt-1">Hlavní oblasti, na kterých pracuji</p>
+
+            <div class="mt-4 space-y-4">
+                <!-- skill item -->
+                <div>
+                    <div class="flex justify-between text-sm font-medium text-white">
+                        <span>Cybersecurity</span>
+                        <span class="text-white/75">80%</span>
+                    </div>
+                    <div class="w-full h-2 bg-white/5 rounded-full mt-2 overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-600" style="width:80%"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex justify-between text-sm font-medium text-white">
+                        <span>Full-stack</span>
+                        <span class="text-white/75">75%</span>
+                    </div>
+                    <div class="w-full h-2 bg-white/5 rounded-full mt-2 overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-600" style="width:75%"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex justify-between text-sm font-medium text-white">
+                        <span>AI / ML</span>
+                        <span class="text-white/75">60%</span>
+                    </div>
+                    <div class="w-full h-2 bg-white/5 rounded-full mt-2 overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-600" style="width:60%"></div>
+                    </div>
+                </div>
+
+                <!-- skill pills -->
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <span class="px-3 py-1 rounded-full bg-white/5 text-white text-sm font-medium">JavaScript</span>
+                    <span class="px-3 py-1 rounded-full bg-white/5 text-white text-sm font-medium">Python</span>
+                    <span class="px-3 py-1 rounded-full bg-white/5 text-white text-sm font-medium">React</span>
+                    <span class="px-3 py-1 rounded-full bg-white/5 text-white text-sm font-medium">Node.js</span>
+                    <span class="px-3 py-1 rounded-full bg-white/5 text-white text-sm font-medium">Linux</span>
+                </div>
+
+            </div>
+        </article>
+
+        <!-- Kontakt (Tailwind utilities only) -->
+        <article id="Contact"
+                 class="bg-gradient-to-b from-white/2 to-transparent border border-white/5 rounded-2xl p-6 shadow-lg">
+            <h3 class="text-xl font-semibold text-white">Contact</h3>
+            <p class="text-sm text-white/75 mt-1">Rychle a přehledně — napište mi nebo zavolejte</p>
+
+            <ul class="mt-4 space-y-2 text-white">
+                <li>Email: <a href="mailto:jan@example.com" class="text-indigo-400">jan@example.com</a></li>
+                <li>Telefon: <a href="tel:+420000000000" class="text-indigo-400">+420 000 000 000</a></li>
+                <li>Lokace: Ostrava, Česká republika</li>
+            </ul>
+
+            <div class="mt-5 flex flex-wrap gap-3">
+                <a href="mailto:jan@example.com"
+                   class="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold px-4 py-2 rounded-lg shadow">Napište
+                    mi</a>
+                <a href="projects.html" class="inline-block border border-white/6 text-white px-4 py-2 rounded-lg">Projekty</a>
+            </div>
+        </article>
+
+    </section>
+
 
 </main>
-<footer>
-
+<footer class="bg-third  text-secondary">
+    <p>Created by Jan Kaduch | 2025</p>
 </footer>
 
 <script src="../main.js"></script>

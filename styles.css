@@ -1,0 +1,178 @@
+/* Global custom styles and design improvements - this file is intentionally
+   separate from Tailwind-input (`src/input.css`). */
+
+:root {
+    /* fallbacks to ensure visuals even if variables aren't available */
+    --font-sans: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    --color-primary: #b63dd5;
+    --color-secondary: #ffffff;
+    --color-background: #282C33;
+    --color-third: #121317;
+    --muted: rgba(255, 255, 255, 0.72);
+    --radius-lg: 12px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: var(--font-sans), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-background);
+    color: var(--color-secondary);
+    line-height: 1.45;
+    font-size: 16px;
+}
+
+/* Utility overrides and link styles */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-primary);
+}
+
+/* Nav styling: translucent, subtle border and spacing */
+nav {
+    backdrop-filter: blur(6px);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+    padding-block: 0.6rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+nav .text-primary {
+    color: var(--color-primary);
+}
+
+nav ul li a {
+    padding: 0.35rem 0.5rem;
+    border-radius: 8px;
+    transition: background 160ms, color 160ms, transform 160ms;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.02);
+    transform: translateY(-1px);
+}
+
+/* Header and avatar */
+header {
+    padding: 2.4rem 1rem;
+    gap: 1.25rem;
+}
+
+.header-information p {
+    color: var(--color-secondary);
+    font-size: 1.05rem;
+    max-width: 48rem;
+    margin: 0 0 1rem 0;
+}
+
+.me-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.me-header img {
+    width: 256px;
+    height: 256px;
+    object-fit: cover;
+    border-radius: 9999px;
+    border: 3px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 8px 24px rgba(11, 12, 14, 0.6);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.me-header img:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 18px 40px rgba(11, 12, 14, 0.7);
+}
+
+/* Main typography */
+main {
+    padding: 2rem 1rem;
+    display: block;
+}
+
+h1, h2, h3 {
+    color: var(--color-secondary);
+    margin: 0 0 0.6rem 0;
+    letter-spacing: -0.02em;
+}
+
+h1.font-bold {
+    font-size: 2.1rem;
+}
+
+/* Typing animation class (moved from input.css) */
+.animate-typing {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid var(--color-secondary);
+    animation: typing 2.4s steps(20, end) forwards, blink 0.75s step-end infinite;
+    max-width: 38ch;
+}
+
+/* Footer */
+footer {
+    padding: 1.2rem;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.02), transparent);
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+/* Small helper classes */
+.bg-background {
+    background: var(--color-background);
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-secondary {
+    color: var(--color-secondary);
+}
+
+.bg-third {
+    background: var(--color-third);
+}
+
+/* Accessibility helper copied from input (kept for duplication safety) */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Reuse keyframes: keep declarations here too in case styles.css is loaded after the compiled Tailwind */
+@keyframes typing {
+    0% {
+        width: 0%;
+        visibility: visible;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: var(--color-secondary);
+    }
+}
+
