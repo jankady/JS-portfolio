@@ -64,3 +64,11 @@ window.addEventListener('DOMContentLoaded', () => {
     if (desktopIcon) desktopIcon.textContent = (savedTheme === 'dark') ? '🌙' : '☀️';
     if (mobileIcon) mobileIcon.textContent = (savedTheme === 'dark') ? '🌙' : '☀️';
 });
+
+// nasteveni sekce skills a jejich id
+document.addEventListener('DOMContentLoaded', () => {
+    const skillsSection = document.getElementById('skill-cyber');
+    if (skillsSection) {
+        console.log("ano")
+    }
+});
