@@ -8,6 +8,7 @@
     --color-secondary: white;
     --color-background: #282C33;
     --color-third: #121317;
+    --font-inter: 'Inter', sans-serif;
 }
 
 html.dark {
@@ -21,23 +22,6 @@ html.light {
     --color-secondary: #000000;
     --color-background: #e1e1e1;
     --color-third: #e4b5f6;
-}
-
-body {
-    font-family: var(--font-sans);
-}
-
-/* Schovat checkbox vizuálně, ale zachovat pro accessibility */
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
 }
 
 /* Animace mobilního menu */

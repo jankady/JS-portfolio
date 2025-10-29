@@ -7,48 +7,52 @@
     <link href="../styles.css" rel="stylesheet">
     <title>Kaduch Jan | Main </title>
 </head>
-<body class="bg-background">
+<body class="bg-background font-inter">
 
 <nav class="bg-background  border-primary">
     <div class="max-w-7xl mx-auto px-4">
-        <div class="flex justify-between items-center h-16">
-            <div class="text-primary font-bold text-xl">
+        <div class="flex justify-between items-center h-16 align-middle">
+            <!-- Name-->
+            <div class="text-primary font-bold text-xl nav-name">
                 Jan
             </div>
 
             <!-- Desktop menu  -->
-            <ul class="hidden md:flex gap-6 items-center text-secondary ">
+            <ul class="hidden md:flex gap-6 items-center text-secondary align-middle ">
                 <li><a href="index.html" class="hover:text-primary font-bold"><span class="text-primary ">#</span>Main
                     page</a></li>
                 <li><a href="aboutme.html" class="hover:text-primary"><span class="text-primary ">#</span>About me</a>
                 </li>
                 <li><a href="projects.html" class="hover:text-primary"><span class="text-primary ">#</span>Projects</a>
                 </li>
-                <li class="ml-9">
+                <li class="ml-9 mt-2">
                     <!-- Theme Toggle Slider -->
                     <label class="relative inline-block w-16 h-8 cursor-pointer">
                         <input type="checkbox" id="theme-toggle" class="sr-only peer">
                         <div class="w-full h-full bg-gray-400 rounded-full peer-checked:bg-primary transition-all"></div>
-                        <div class="absolute top-1 left-1 bg-white w-6 h-6 rounded-full transition-all peer-checked:translate-x-8 flex items-center justify-center text-xs">
+                        <div class="absolute top-1 left-1 bg-white w-6 h-6 rounded-full transition-all
+                         peer-checked:translate-x-8 flex items-center justify-center text-xs">
                             <span class="theme-icon">☀️</span>
                         </div>
                     </label>
                 </li>
             </ul>
 
+            <!-- slider for mobiles-->
+            <div class="md:hidden flex  gap-2 py-2 mr-5">
+                <label class="relative inline-block w-16 h-8 cursor-pointer">
+                    <input type="checkbox" id="theme-toggle-mobile" class="sr-only peer">
+                    <div class="w-full h-full bg-gray-400 rounded-full peer-checked:bg-primary transition-all"></div>
+                    <div class="absolute top-1 left-1 bg-white w-6 h-6 rounded-full transition-all peer-checked:translate-x-8 flex items-center justify-center text-xs">
+                        <span class="theme-icon-mobile">☀️</span>
+                    </div>
+                </label>
+            </div>
+
             <!-- Hamburger menu-->
             <div class="flex justify-between">
 
-                <!-- slider-->
-                <div class="md:hidden flex  gap-2 py-2 mr-5">
-                    <label class="relative inline-block w-16 h-8 cursor-pointer">
-                        <input type="checkbox" id="theme-toggle-mobile" class="sr-only peer">
-                        <div class="w-full h-full bg-gray-400 rounded-full peer-checked:bg-primary transition-all"></div>
-                        <div class="absolute top-1 left-1 bg-white w-6 h-6 rounded-full transition-all peer-checked:translate-x-8 flex items-center justify-center text-xs">
-                            <span class="theme-icon-mobile">☀️</span>
-                        </div>
-                    </label>
-                </div>
+
 
                 <button id="mobile-menu-button" class="md:hidden text-secondary ml-10">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -178,7 +182,7 @@
 
 
 </main>
-<footer class="bg-third  text-secondary">
+<footer class="bg-third  text-secondary text-center p-4 mt-10 text-sm">
     <p>Created by Jan Kaduch | 2025</p>
 </footer>
 
