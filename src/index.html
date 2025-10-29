@@ -9,7 +9,7 @@
 </head>
 <body class="bg-background font-inter">
 
-<nav class="bg-background  border-primary">
+<nav class="bg-background  border-primary py-4 mb-6 border-b">
     <div class="max-w-7xl mx-auto px-4">
         <div class="flex justify-between items-center h-16 align-middle">
             <!-- Name-->
@@ -50,7 +50,7 @@
                     </label>
                 </div>
 
-            <!-- hamburger menu Icon -->
+                <!-- hamburger menu Icon -->
                 <button id="mobile-menu-button" class="md:hidden text-secondary ml-10">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -75,90 +75,96 @@
     </div>
 </nav>
 
-<header class="grid sm:grid-cols-1 md:grid-cols-2 ">
+<header class="grid sm:grid-cols-1 md:grid-cols-3 px-8 py-4 gap-5">
 
     <div class="header-information">
         <h1 class="text-secondary text-3xl">I am an It student of bachelor degree on <span
                 class="text-primary">Banska</span> University situated in Ostrava</h1>
-        <p class="text-secondary">Interested in <span class="text-primary">cybersecurity</span>,
+        <p class="text-paragraph">Interested in <span class="text-primary">cybersecurity</span>,
             <span class="text-primary">full-stack developing</span> and <span class="text-primary">AI</span></p>
     </div>
 
-    <div class="me-header">
-        <img src="../img/profile_picture.jpg" alt="my profile picture"/>
+    <div class="me-header flex content-center justify-center col-span-2">
+        <img src="../img/profile_picture.jpg" alt="my profile picture"
+             class="w-3xs h-3xs object-cover rounded-full shadow-lg shadow-slate-950"/>
     </div>
 
 </header>
-<main>
+<main class="block px-4 py-8">
 
-    <div class="w-max">
-        <h1 class="animate-typing overflow-hidden whitespace-nowrap pr-5 font-bold text-secondary">
-            Hello World
-        </h1>
-    </div>
-    <h1 class="font-bold underline text-secondary">
-        Hello world!
-    </h1>
-
-    <!-- Tailwind-only sections: Kontakt a Skilly -->
-    <section id="kontakt-skills" class="max-w-7xl mx-auto px-4 mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-
-
-
-        <!-- Skilly (Tailwind utilities only) -->
-        <article id="Skills"
-                 class="bg-gradient-to-b from-white/2 to-transparent border border-white/5 rounded-2xl p-6 shadow-lg">
-            <h3 class="text-xl font-semibold text-white">Skills</h3>
-            <p class="text-sm text-white/75 mt-1">Hlavní oblasti, na kterých pracuji</p>
+<!--    Skill-->
+    <section id="skills-section" class="max-w-3xl mx-auto my-6">
+        <div class="flex align-middle mb-4">
+            <h3 class="text-2xl  text-white "><span class="text-primary">#</span>Skills</h3>
+            <hr class="flex-grow border-t text-primary ml-4 mt-4">
+        </div>
+        <div class="bg-gradient-to-b from-secondary/2 to-transparent border border-secondary/5 rounded-2xl p-6 shadow-lg shadow-primary/10">
+            <p class="text-sm text-paragraph mt-0.5">Hlavní oblasti, na kterých pracuji</p>
 
             <div class="mt-4 space-y-4">
-                <!-- skill item -->
+
                 <div>
-                    <div class="flex justify-between text-sm font-medium text-white">
-                        <span>Cybersecurity</span>
-                        <span class="text-white/75">80%</span>
+                    <div class="flex justify-between text-sm  text-secondary">
+                        <span class="font-bold">Cybersecurity</span>
+                        <span class="text">80%</span>
                     </div>
-                    <div class="w-full h-2 bg-white/5 rounded-full mt-2 overflow-hidden">
-                        <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-600" style="width:80%"></div>
+                    <div class="w-full h-2 bg-paragraph/10 rounded-full mt-2 overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-indigo-500 to-primary w-8/10"></div>
                     </div>
                 </div>
 
                 <div>
-                    <div class="flex justify-between text-sm font-medium text-white">
-                        <span>Full-stack</span>
-                        <span class="text-white/75">75%</span>
+                    <div class="flex justify-between text-sm  text-secondary">
+                        <span class="font-bold">FullStack</span>
+                        <span class="text">80%</span>
                     </div>
-                    <div class="w-full h-2 bg-white/5 rounded-full mt-2 overflow-hidden">
-                        <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-600" style="width:75%"></div>
+                    <div class="w-full h-2 bg-paragraph/10 rounded-full mt-2 overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-indigo-500 to-primary w-8/10"></div>
                     </div>
                 </div>
 
                 <div>
-                    <div class="flex justify-between text-sm font-medium text-white">
-                        <span>AI / ML</span>
-                        <span class="text-white/75">60%</span>
+                    <div class="flex justify-between text-sm  text-secondary">
+                        <span class="font-bold">AI/ML</span>
+                        <span class="text">80%</span>
                     </div>
-                    <div class="w-full h-2 bg-white/5 rounded-full mt-2 overflow-hidden">
-                        <div class="h-full bg-gradient-to-r from-indigo-500 to-purple-600" style="width:60%"></div>
+                    <div class="w-full h-2 bg-paragraph/10 rounded-full mt-2 overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-indigo-500 to-primary w-8/10"></div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex justify-between text-sm  text-secondary">
+                        <span class="font-bold">Low-end programming </span>
+                        <span class="text">80%</span>
+                    </div>
+                    <div class="w-full h-2 bg-paragraph/10 rounded-full mt-2 overflow-hidden">
+                        <div class="h-full bg-gradient-to-r from-indigo-500 to-primary w-8/10"></div>
                     </div>
                 </div>
 
                 <!-- skill pills -->
                 <div class="mt-4 flex flex-wrap gap-2">
-                    <span class="px-3 py-1 rounded-full bg-white/5 text-white text-sm font-medium">JavaScript</span>
-                    <span class="px-3 py-1 rounded-full bg-white/5 text-white text-sm font-medium">Python</span>
-                    <span class="px-3 py-1 rounded-full bg-white/5 text-white text-sm font-medium">React</span>
-                    <span class="px-3 py-1 rounded-full bg-white/5 text-white text-sm font-medium">Node.js</span>
-                    <span class="px-3 py-1 rounded-full bg-white/5 text-white text-sm font-medium">Linux</span>
+                    <span id="skill-cyber" class="px-3 py-1 rounded-full bg-primary/75 text-secondary text-sm font-bold">Cybersecurity</span>
+                    <span id="skill-3d" class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold">3D graphic</span>
+                    <span id="skill-lowend" class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold">Low-end programming</span>
+                    <span id="skill-web" class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold">web devolopment</span>
+                    <span id="skill-ai" class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold">AI and ML</span>
                 </div>
 
             </div>
-        </article>
+        </div>
 
-        <!-- Kontakt (Tailwind utilities only) -->
-        <article id="Contact"
-                 class="bg-gradient-to-b from-white/2 to-transparent border border-white/5 rounded-2xl p-6 shadow-lg">
-            <h3 class="text-xl font-semibold text-white">Contact</h3>
+    </section>
+
+<!--    Contact-->
+    <section id="form-section" class="max-w-3xl mx-auto">
+        <div class="flex align-middle mb-4">
+            <h3 class="text-2xl  text-white "><span class="text-primary">#</span>Form</h3>
+            <hr class="flex-grow border-t text-primary ml-4 mt-4">
+        </div>
+        <div class="bg-gradient-to-b from-secondary/2 to-transparent border border-secondary/5 rounded-2xl p-6 shadow-lg shadow-primary/10">
+
             <p class="text-sm text-white/75 mt-1">Rychle a přehledně — napište mi nebo zavolejte</p>
 
             <ul class="mt-4 space-y-2 text-white">
@@ -173,10 +179,11 @@
                     mi</a>
                 <a href="projects.html" class="inline-block border border-white/6 text-white px-4 py-2 rounded-lg">Projekty</a>
             </div>
-        </article>
+
+            </div>
+        </div>
 
     </section>
-
 
 </main>
 <footer class="bg-third  text-secondary text-center p-4 mt-10 text-sm">

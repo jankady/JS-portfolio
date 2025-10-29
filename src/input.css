@@ -8,6 +8,7 @@
     --color-secondary: white;
     --color-background: #282C33;
     --color-third: #121317;
+    --color-paragraph: #CCCCCC;
     --font-inter: 'Inter', sans-serif;
 }
 
@@ -15,12 +16,14 @@ html.dark {
     --color-primary: #b63dd5;
     --color-secondary: white;
     --color-background: #282C33;
+    --color-paragraph: #CCCCCC;
     --color-third: #121317;
 }
 html.light {
     --color-primary: #c837ed;
     --color-secondary: #000000;
     --color-background: #e1e1e1;
+    --color-paragraph: #333333;
     --color-third: #e4b5f6;
 }
 
