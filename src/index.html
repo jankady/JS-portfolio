@@ -9,6 +9,7 @@
 </head>
 <body class="bg-background font-inter">
 
+<!--navigation-->
 <nav class="bg-background  border-primary py-1 border-b sticky top-0 w-full z-50">
     <div class="max-w-7xl mx-auto px-4">
         <div class="flex justify-between items-center h-16 align-middle">
@@ -74,8 +75,13 @@
         </div>
     </div>
 </nav>
-
-<div class="container w-80% block mx-auto">
+<!--scroll bar-->
+<div id="scroll-progress">
+    <div id="scroll-progress-fill"></div>
+</div>
+<!--header and main-->
+<div class="container w-4/5 block mx-auto">
+    <!--    header-->
     <header class="grid sm:grid-cols-1 md:grid-cols-2 px-8 py-4 gap-5">
 
         <div class="header-information">
@@ -91,7 +97,7 @@
         </div>
 
     </header>
-
+    <!--    main-->
     <main class="block px-4 py-8">
 
         <!--    Skill-->
@@ -192,11 +198,10 @@
 
     </main>
 </div>
-
+<!--footer-->
 <footer class="bg-third  text-secondary text-center p-4 mt-10 text-sm">
     <p>Created by Jan Kaduch | 2025</p>
 </footer>
-<div id="scroll-progress" class="scroll-progress fixed top-[65px] left-0 w-full h-1 bg-secondary/10 z-40"></div>
 <script src="../main.js"></script>
 </body>
 </html>

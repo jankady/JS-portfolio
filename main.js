@@ -64,3 +64,19 @@ window.addEventListener('DOMContentLoaded', () => {
     if (desktopIcon) desktopIcon.textContent = (savedTheme === 'dark') ? '🌙' : '☀️';
     if (mobileIcon) mobileIcon.textContent = (savedTheme === 'dark') ? '🌙' : '☀️';
 });
+
+
+function updateProgressBar() {
+    const scrollProgress = document.getElementById('scroll-progress-fill');
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = ((scrollTop / docHeight) * 100);
+
+    scrollProgress.style.height = scrollPercent + '%';
+}
+
+// Aktualizace při scrollování
+window.addEventListener('scroll', updateProgressBar);
+
+// Aktualizace při načtení stránky
+window.addEventListener('load', updateProgressBar);
