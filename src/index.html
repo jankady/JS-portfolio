@@ -9,7 +9,7 @@
 </head>
 <body class="bg-background font-inter">
 
-<nav class="bg-background  border-primary py-4 mb-6 border-b">
+<nav class="bg-background  border-primary py-1 border-b sticky top-0 w-full z-50">
     <div class="max-w-7xl mx-auto px-4">
         <div class="flex justify-between items-center h-16 align-middle">
             <!-- Name-->
@@ -75,121 +75,128 @@
     </div>
 </nav>
 
-<header class="grid sm:grid-cols-1 md:grid-cols-3 px-8 py-4 gap-5">
+<div class="container w-80% block mx-auto">
+    <header class="grid sm:grid-cols-1 md:grid-cols-2 px-8 py-4 gap-5">
 
-    <div class="header-information">
-        <h1 class="text-secondary text-3xl">I am an It student of bachelor degree on <span
-                class="text-primary">Banska</span> University situated in Ostrava</h1>
-        <p class="text-paragraph">Interested in <span class="text-primary">cybersecurity</span>,
-            <span class="text-primary">full-stack developing</span> and <span class="text-primary">AI</span></p>
-    </div>
-
-    <div class="me-header flex content-center justify-center col-span-2">
-        <img src="../img/profile_picture.jpg" alt="my profile picture"
-             class="w-3xs h-3xs object-cover rounded-full shadow-lg shadow-slate-950"/>
-    </div>
-
-</header>
-<main class="block px-4 py-8">
-
-<!--    Skill-->
-    <section id="skills-section" class="max-w-3xl mx-auto my-6">
-        <div class="flex align-middle mb-4">
-            <h3 class="text-2xl  text-white "><span class="text-primary">#</span>Skills</h3>
-            <hr class="flex-grow border-t text-primary ml-4 mt-4">
+        <div class="header-information">
+            <h1 class="text-secondary text-3xl ">I am an It student of bachelor degree on <span
+                    class="text-primary">Banska</span> University situated in Ostrava</h1>
+            <p class="text-paragraph ">Interested in <span class="text-primary">cybersecurity</span>,
+                <span class="text-primary">full-stack developing</span> and <span class="text-primary">AI</span></p>
         </div>
-        <div class="bg-gradient-to-b from-secondary/2 to-transparent border border-secondary/5 rounded-2xl p-6 shadow-lg shadow-primary/10">
-            <p class="text-sm text-paragraph mt-0.5">Hlavní oblasti, na kterých pracuji</p>
 
-            <div class="mt-4 space-y-4">
+        <div class="me-header flex content-center justify-center">
+            <img src="../img/profile_picture.jpg" alt="my profile picture"
+                 class="w-3xs h-3xs object-cover rounded-full shadow-lg shadow-slate-950"/>
+        </div>
 
-                <div>
-                    <div class="flex justify-between text-sm  text-secondary">
-                        <span class="font-bold">Cybersecurity</span>
-                        <span class="text">80%</span>
+    </header>
+
+    <main class="block px-4 py-8">
+
+        <!--    Skill-->
+        <section id="skills-section" class="max-w-3xl mx-auto my-6">
+            <div class="flex align-middle mb-4">
+                <h3 class="text-2xl  text-white "><span class="text-primary">#</span>Skills</h3>
+                <hr class="flex-grow border-t text-primary ml-4 mt-4">
+            </div>
+            <div class="bg-gradient-to-b from-secondary/2 to-transparent border border-secondary/5 rounded-2xl p-6 shadow-lg shadow-primary/10">
+                <p class="text-sm text-paragraph mt-0.5">Hlavní oblasti, na kterých pracuji</p>
+
+                <div class="mt-4 space-y-4">
+
+                    <div>
+                        <div class="flex justify-between text-sm  text-secondary">
+                            <span class="font-bold">Cybersecurity</span>
+                            <span class="text">80%</span>
+                        </div>
+                        <div class="w-full h-2 bg-paragraph/10 rounded-full mt-2 overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-indigo-500 to-primary w-8/10"></div>
+                        </div>
                     </div>
-                    <div class="w-full h-2 bg-paragraph/10 rounded-full mt-2 overflow-hidden">
-                        <div class="h-full bg-gradient-to-r from-indigo-500 to-primary w-8/10"></div>
+
+                    <div>
+                        <div class="flex justify-between text-sm  text-secondary">
+                            <span class="font-bold">FullStack</span>
+                            <span class="text">80%</span>
+                        </div>
+                        <div class="w-full h-2 bg-paragraph/10 rounded-full mt-2 overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-indigo-500 to-primary w-8/10"></div>
+                        </div>
                     </div>
+
+                    <div>
+                        <div class="flex justify-between text-sm  text-secondary">
+                            <span class="font-bold">AI/ML</span>
+                            <span class="text">80%</span>
+                        </div>
+                        <div class="w-full h-2 bg-paragraph/10 rounded-full mt-2 overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-indigo-500 to-primary w-8/10"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between text-sm  text-secondary">
+                            <span class="font-bold">Low-end programming </span>
+                            <span class="text">80%</span>
+                        </div>
+                        <div class="w-full h-2 bg-paragraph/10 rounded-full mt-2 overflow-hidden">
+                            <div class="h-full bg-gradient-to-r from-indigo-500 to-primary w-8/10"></div>
+                        </div>
+                    </div>
+
+                    <!-- skill pills -->
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span id="skill-cyber"
+                              class="px-3 py-1 rounded-full bg-primary/75 text-secondary text-sm font-bold">Cybersecurity</span>
+                        <span id="skill-3d"
+                              class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold">3D graphic</span>
+                        <span id="skill-lowend"
+                              class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold">Low-end programming</span>
+                        <span id="skill-web"
+                              class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold">web devolopment</span>
+                        <span id="skill-ai"
+                              class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold">AI and ML</span>
+                    </div>
+
                 </div>
+            </div>
 
-                <div>
-                    <div class="flex justify-between text-sm  text-secondary">
-                        <span class="font-bold">FullStack</span>
-                        <span class="text">80%</span>
-                    </div>
-                    <div class="w-full h-2 bg-paragraph/10 rounded-full mt-2 overflow-hidden">
-                        <div class="h-full bg-gradient-to-r from-indigo-500 to-primary w-8/10"></div>
-                    </div>
-                </div>
+        </section>
 
-                <div>
-                    <div class="flex justify-between text-sm  text-secondary">
-                        <span class="font-bold">AI/ML</span>
-                        <span class="text">80%</span>
-                    </div>
-                    <div class="w-full h-2 bg-paragraph/10 rounded-full mt-2 overflow-hidden">
-                        <div class="h-full bg-gradient-to-r from-indigo-500 to-primary w-8/10"></div>
-                    </div>
-                </div>
+        <!--    Contact-->
+        <section id="form-section" class="max-w-3xl mx-auto">
+            <div class="flex align-middle mb-4">
+                <h3 class="text-2xl  text-white "><span class="text-primary">#</span>Form</h3>
+                <hr class="flex-grow border-t text-primary ml-4 mt-4">
+            </div>
+            <div class="bg-gradient-to-b from-secondary/2 to-transparent border border-secondary/5 rounded-2xl p-6 shadow-lg shadow-primary/10">
 
-                <div>
-                    <div class="flex justify-between text-sm  text-secondary">
-                        <span class="font-bold">Low-end programming </span>
-                        <span class="text">80%</span>
-                    </div>
-                    <div class="w-full h-2 bg-paragraph/10 rounded-full mt-2 overflow-hidden">
-                        <div class="h-full bg-gradient-to-r from-indigo-500 to-primary w-8/10"></div>
-                    </div>
-                </div>
+                <p class="text-sm text-white/75 mt-1">Rychle a přehledně — napište mi nebo zavolejte</p>
 
-                <!-- skill pills -->
-                <div class="mt-4 flex flex-wrap gap-2">
-                    <span id="skill-cyber" class="px-3 py-1 rounded-full bg-primary/75 text-secondary text-sm font-bold">Cybersecurity</span>
-                    <span id="skill-3d" class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold">3D graphic</span>
-                    <span id="skill-lowend" class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold">Low-end programming</span>
-                    <span id="skill-web" class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold">web devolopment</span>
-                    <span id="skill-ai" class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold">AI and ML</span>
+                <ul class="mt-4 space-y-2 text-white">
+                    <li>Email: <a href="mailto:jan@example.com" class="text-indigo-400">jan@example.com</a></li>
+                    <li>Telefon: <a href="tel:+420000000000" class="text-indigo-400">+420 000 000 000</a></li>
+                    <li>Lokace: Ostrava, Česká republika</li>
+                </ul>
+
+                <div class="mt-5 flex flex-wrap gap-3">
+                    <a href="mailto:jan@example.com"
+                       class="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold px-4 py-2 rounded-lg shadow">Napište
+                        mi</a>
+                    <a href="projects.html" class="inline-block border border-white/6 text-white px-4 py-2 rounded-lg">Projekty</a>
                 </div>
 
             </div>
-        </div>
+        </section>
 
-    </section>
+    </main>
+</div>
 
-<!--    Contact-->
-    <section id="form-section" class="max-w-3xl mx-auto">
-        <div class="flex align-middle mb-4">
-            <h3 class="text-2xl  text-white "><span class="text-primary">#</span>Form</h3>
-            <hr class="flex-grow border-t text-primary ml-4 mt-4">
-        </div>
-        <div class="bg-gradient-to-b from-secondary/2 to-transparent border border-secondary/5 rounded-2xl p-6 shadow-lg shadow-primary/10">
-
-            <p class="text-sm text-white/75 mt-1">Rychle a přehledně — napište mi nebo zavolejte</p>
-
-            <ul class="mt-4 space-y-2 text-white">
-                <li>Email: <a href="mailto:jan@example.com" class="text-indigo-400">jan@example.com</a></li>
-                <li>Telefon: <a href="tel:+420000000000" class="text-indigo-400">+420 000 000 000</a></li>
-                <li>Lokace: Ostrava, Česká republika</li>
-            </ul>
-
-            <div class="mt-5 flex flex-wrap gap-3">
-                <a href="mailto:jan@example.com"
-                   class="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold px-4 py-2 rounded-lg shadow">Napište
-                    mi</a>
-                <a href="projects.html" class="inline-block border border-white/6 text-white px-4 py-2 rounded-lg">Projekty</a>
-            </div>
-
-            </div>
-        </div>
-
-    </section>
-
-</main>
 <footer class="bg-third  text-secondary text-center p-4 mt-10 text-sm">
     <p>Created by Jan Kaduch | 2025</p>
 </footer>
-
+<div id="scroll-progress" class="scroll-progress fixed top-[65px] left-0 w-full h-1 bg-secondary/10 z-40"></div>
 <script src="../main.js"></script>
 </body>
 </html>
