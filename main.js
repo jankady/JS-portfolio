@@ -63,10 +63,6 @@ function initializeTheme() {
     if (desktopIcon) desktopIcon.textContent = (savedTheme === 'dark') ? '🌙' : '☀️';
     if (mobileIcon) mobileIcon.textContent = (savedTheme === 'dark') ? '🌙' : '☀️';
 }
-// Event listeners pro oba slidery
-window.addEventListener('DOMContentLoaded', initializeTheme);
-
-
 function updateProgressBar() {
     const scrollProgress = document.getElementById('scroll-progress-fill');
     const scrollTop = window.scrollY;
@@ -76,8 +72,123 @@ function updateProgressBar() {
     scrollProgress.style.height = scrollPercent + '%';
 }
 
-// Aktualizace při scrollování
-window.addEventListener('scroll', updateProgressBar);
+// Skills bar interakce
+function handleSkillInteraction(skillType) {
+    const skillData = {
+        cyber: [
+            { name: 'Network Security', percentage: 90 },
+            { name: 'Penetration Testing', percentage: 85 },
+            { name: 'Incident Response', percentage: 75 },
+            { name: 'Cryptography', percentage: 80 }
+        ],
+        '3d': [
+            { name: 'Blender', percentage: 70 },
+            { name: 'Maya', percentage: 60 },
+            { name: 'Unity 3D', percentage: 75 },
+            { name: 'Texturing', percentage: 65 }
+        ],
+        lowend: [
+            { name: 'Assembly', percentage: 70 },
+            { name: 'C/C++', percentage: 85 },
+            { name: 'Embedded Systems', percentage: 75 },
+            { name: 'Hardware Programming', percentage: 60 }
+        ],
+        web: [
+            { name: 'HTML/CSS', percentage: 95 },
+            { name: 'JavaScript', percentage: 90 },
+            { name: 'React', percentage: 85 },
+            { name: 'Node.js', percentage: 80 }
+        ],
+        ai: [
+            { name: 'Machine Learning', percentage: 80 },
+            { name: 'Deep Learning', percentage: 75 },
+            { name: 'Natural Language Processing', percentage: 70 },
+            { name: 'Computer Vision', percentage: 65 }
+        ]
+    };
 
-// Aktualizace při načtení stránky
+    updateSkillBars(skillData[skillType]);
+}
+
+function updateSkillBars(skills) {
+    const skillsContainer = document.getElementById('skills-container');
+
+    // Vyčistit kontejner
+    skillsContainer.innerHTML = '';
+
+    // Vytvořit nové skill bary podle dat
+    skills.forEach((skill, index) => {
+        const skillBarDiv = document.createElement('div');
+        skillBarDiv.id = `skill-bar-${index}`;
+
+        const widthClass = getWidthClass(skill.percentage);
+
+        skillBarDiv.innerHTML = `
+            <div class="flex justify-between text-sm text-secondary">
+                <span class="font-bold skill-name">${skill.name}</span>
+                <span class="text skill-percentage">${skill.percentage}%</span>
+            </div>
+            <div class="w-full h-2 bg-paragraph/10 rounded-full mt-2 overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-indigo-500 to-primary skill-progress ${widthClass}"></div>
+            </div>
+        `;
+
+        skillsContainer.appendChild(skillBarDiv);
+    });
+}
+
+function getWidthClass(percentage) {
+    if (percentage >= 90) return 'w-9/10';
+    if (percentage >= 80) return 'w-8/10';
+    if (percentage >= 70) return 'w-7/10';
+    if (percentage >= 60) return 'w-6/10';
+    if (percentage >= 50) return 'w-5/10';
+    return 'w-4/10';
+}
+
+// Centrální DOMContentLoaded event listener
+document.addEventListener('DOMContentLoaded', function() {
+    // Inicializace tématu
+    initializeTheme();
+
+    // Inicializace progress baru
+    updateProgressBar();
+
+    // Inicializace skills
+    handleSkillInteraction('cyber');
+
+    // Nastavení výchozího aktivního skill pillu
+    const defaultPill = document.getElementById('skill-cyber');
+    if (defaultPill) {
+        defaultPill.classList.add('bg-primary/75');
+        defaultPill.classList.remove('bg-secondary/15');
+    }
+
+    // Event listeners pro skill pills
+    const skill_list = document.querySelectorAll('[id^="skill-"]');
+    console.log('Nalezené skill pills:', skill_list.length); // Debug
+    
+    skill_list.forEach(list => {
+        list.addEventListener('click', function() {
+            console.log('Kliknuto na:', this.id); // Debug
+            
+            // Odstranit aktivní třídu ze všech pills
+            skill_list.forEach(p => {
+                p.classList.remove('bg-primary/75');
+                p.classList.add('bg-secondary/15');
+            });
+
+            // Přidat aktivní třídu na kliknutý pill
+            this.classList.remove('bg-secondary/15');
+            this.classList.add('bg-primary/75');
+
+            const skillType = this.id.replace('skill-', '');
+            console.log('Skill type:', skillType); // Debug
+            handleSkillInteraction(skillType);
+        });
+    });
+});
+
+// Event listeners pro ostatní funkce
+window.addEventListener('scroll', updateProgressBar);
 window.addEventListener('load', updateProgressBar);

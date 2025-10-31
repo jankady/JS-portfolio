@@ -82,43 +82,46 @@
 <!--header and main-->
 <div class="container w-3/4 block mx-auto">
     <!--    header-->
-    <header class="md:flex px-8 pt-5 justify-between items-center gap-8 w-3/5 mx-auto">
+    <header class=" px-8 pt-5 ">
+        <h1 class="text-secondary text-3xl text-center">Hi, I am <span class="text-primary">Jan Kaduch</span></h1>
+        <div class="md:flex justify-between items-center gap-8 w-full md:w-3/5 mx-auto">
+            <div class="header-information flex gap-2">
+                <div>
+                    <div class="bullet-points my-4">
+                        <ul class="list-none list-inside space-y-4 text-paragraph text-xs">
+                            <li class="flex gap-2 content-center items-center"><img src="../img/location.png"
+                                                                                    alt="location icon"
+                                                                                    class="w-9 justify-center"> Frenštát,
+                                Czechia
+                            </li>
+                            <li class="flex gap-2 content-center items-center"><img src="../img/age.png" alt="age icon"
+                                                                                    class="w-10"> 20 Years Old
+                            </li>
+                            <li class="flex gap-2 content-center items-center"><img src="../img/experience.png"
+                                                                                    alt="experience icon" class="w-10">4+
+                                Years of Experience
+                            </li>
+                        </ul>
 
-        <div class="header-information flex gap-2">
-            <div class="">
-                <h1 class="text-secondary text-3xl ">Hi, I am <span class="text-primary">Jan Kaduch</span></h1>
-                <div class="bullet-points my-4">
-                    <ul class="list-none list-inside space-y-4 text-paragraph text-xs">
-                        <li class="flex gap-2 content-center items-center"><img src="../img/location.png"
-                                                                                alt="location icon"
-                                                                                class="w-9 justify-center"> Frenštát,
-                            Czechia
-                        </li>
-                        <li class="flex gap-2 content-center items-center"><img src="../img/age.png" alt="age icon"
-                                                                                class="w-10"> 20 Years Old
-                        </li>
-                        <li class="flex gap-2 content-center items-center"><img src="../img/experience.png"
-                                                                                alt="experience icon" class="w-10">4+
-                            Years of Experience
-                        </li>
-                    </ul>
+                    </div>
 
+                </div>
+                <div class="text-secondary items-center content-center w-3/5">
+                    <p>Interested in <span class="text-primary">cybersecurity</span>,
+                        <span class="text-primary">full-stack developing</span> and <span class="text-primary">AI</span>.
+                        I love to keep learning new things in It industry every day.</p>
+                    <button class="hidden md:block from-secondary/2 to-transparent border border-secondary/5 rounded-2xl px-5 py-3 shadow-lg mt-10 md:ml-10
+                hover:text-primary cursor-pointer hover:font-bold hover:shadow-xs hover:shadow-primary">Contact Me</button>
                 </div>
 
             </div>
-            <div class="text-secondary items-center content-center w-3/5">
-                <p>Interested in <span class="text-primary">cybersecurity</span>,
-                    <span class="text-primary">full-stack developing</span> and <span class="text-primary">AI</span>.
-                    I love to keep learning new things in It industry every day.</p>
-                <button class="bg-gradient-to-b from-secondary/2 to-transparent border border-secondary/5 rounded-2xl p-1 shadow-lg mt-4">Contact Me!</button>
+
+            <div class="me-header flex content-center justify-center mt-7">
+                <img src="../img/profile_picture.jpg" alt="my profile picture"
+                     class="w-3xs h-3xs object-cover rounded-full shadow-lg shadow-slate-950"/>
             </div>
-
         </div>
 
-        <div class="me-header flex content-center justify-center mt-7">
-            <img src="../img/profile_picture.jpg" alt="my profile picture"
-                 class="w-3xs h-3xs object-cover rounded-full shadow-lg shadow-slate-950"/>
-        </div>
 
     </header>
     <!--    main-->
@@ -133,62 +136,23 @@
             <div class="bg-gradient-to-b from-secondary/2 to-transparent border border-secondary/5 rounded-2xl p-6 shadow-lg shadow-primary/10">
                 <p class="text-sm text-paragraph mt-0.5">Hlavní oblasti, na kterých pracuji</p>
 
-                <div class="mt-4 space-y-4">
+                <!-- skill pills -->
+                <div class="mt-4 flex flex-wrap gap-2">
+                    <span id="skill-cyber"
+                          class="px-3 py-1 rounded-full bg-primary/75 text-secondary text-sm font-bold cursor-pointer">Cybersecurity</span>
+                    <span id="skill-3d"
+                          class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold cursor-pointer">3D graphic</span>
+                    <span id="skill-lowend"
+                          class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold cursor-pointer">Low-end programming</span>
+                    <span id="skill-web"
+                          class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold cursor-pointer">web devolopment</span>
+                    <span id="skill-ai"
+                          class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold cursor-pointer">AI and ML</span>
+                </div>
 
-                    <div>
-                        <div class="flex justify-between text-sm  text-secondary">
-                            <span class="font-bold">Cybersecurity</span>
-                            <span class="text">80%</span>
-                        </div>
-                        <div class="w-full h-2 bg-paragraph/10 rounded-full mt-2 overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-indigo-500 to-primary w-8/10"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex justify-between text-sm  text-secondary">
-                            <span class="font-bold">FullStack</span>
-                            <span class="text">80%</span>
-                        </div>
-                        <div class="w-full h-2 bg-paragraph/10 rounded-full mt-2 overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-indigo-500 to-primary w-8/10"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex justify-between text-sm  text-secondary">
-                            <span class="font-bold">AI/ML</span>
-                            <span class="text">80%</span>
-                        </div>
-                        <div class="w-full h-2 bg-paragraph/10 rounded-full mt-2 overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-indigo-500 to-primary w-8/10"></div>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div class="flex justify-between text-sm  text-secondary">
-                            <span class="font-bold">Low-end programming </span>
-                            <span class="text">80%</span>
-                        </div>
-                        <div class="w-full h-2 bg-paragraph/10 rounded-full mt-2 overflow-hidden">
-                            <div class="h-full bg-gradient-to-r from-indigo-500 to-primary w-8/10"></div>
-                        </div>
-                    </div>
-
-                    <!-- skill pills -->
-                    <div class="mt-4 flex flex-wrap gap-2">
-                        <span id="skill-cyber"
-                              class="px-3 py-1 rounded-full bg-primary/75 text-secondary text-sm font-bold">Cybersecurity</span>
-                        <span id="skill-3d"
-                              class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold">3D graphic</span>
-                        <span id="skill-lowend"
-                              class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold">Low-end programming</span>
-                        <span id="skill-web"
-                              class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold">web devolopment</span>
-                        <span id="skill-ai"
-                              class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold">AI and ML</span>
-                    </div>
-
+                <!-- Kontejner pro dynamické skill bary -->
+                <div id="skills-container" class="mt-4 space-y-4">
+                    <!-- Skill bary se vytvoří dynamicky pomocí JavaScriptu -->
                 </div>
             </div>
 

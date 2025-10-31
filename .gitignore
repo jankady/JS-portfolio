@@ -14,3 +14,4 @@ modules.xml
 vcs.xml
 /node_modules
 /src/output.css
+/src/text.html
