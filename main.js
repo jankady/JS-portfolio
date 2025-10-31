@@ -40,8 +40,7 @@ function toggleTheme() {
     if (mobileIcon) mobileIcon.textContent = (newTheme === 'dark') ? '🌙' : '☀️';
 }
 
-// Event listeners pro oba slidery
-window.addEventListener('DOMContentLoaded', () => {
+function initializeTheme() {
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.classList.add(savedTheme);
 
@@ -63,7 +62,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
     if (desktopIcon) desktopIcon.textContent = (savedTheme === 'dark') ? '🌙' : '☀️';
     if (mobileIcon) mobileIcon.textContent = (savedTheme === 'dark') ? '🌙' : '☀️';
-});
+}
+// Event listeners pro oba slidery
+window.addEventListener('DOMContentLoaded', initializeTheme);
 
 
 function updateProgressBar() {
