@@ -76,34 +76,35 @@ function updateProgressBar() {
 function handleSkillInteraction(skillType) {
     const skillData = {
         cyber: [
-            { name: 'Network Security', percentage: 90 },
-            { name: 'Penetration Testing', percentage: 85 },
-            { name: 'Incident Response', percentage: 75 },
-            { name: 'Cryptography', percentage: 80 }
+            { name: 'HackTheBox', percentage: 20 },
+            { name: 'Network security (ACL, STP etc.)', percentage: 70},
+            { name: 'TryHackMe', percentage: 40 }
         ],
         '3d': [
-            { name: 'Blender', percentage: 70 },
-            { name: 'Maya', percentage: 60 },
-            { name: 'Unity 3D', percentage: 75 },
-            { name: 'Texturing', percentage: 65 }
+            { name: 'Blender', percentage: 45 },
+            { name: 'Unreal Engine', percentage: 60 },
+            { name: 'Texturing', percentage: 32 },
+            { name: 'Modelling', percentage: 48 },
+            { name: 'Animation', percentage: 65 }
         ],
-        lowend: [
-            { name: 'Assembly', percentage: 70 },
-            { name: 'C/C++', percentage: 85 },
-            { name: 'Embedded Systems', percentage: 75 },
-            { name: 'Hardware Programming', percentage: 60 }
+        programming: [
+            { name: 'rust ', percentage: 10 },
+            { name: 'C', percentage: 40 },
+            { name: 'Java', percentage: 75 },
+            { name: 'Python', percentage: 87 },
+            { name: 'OOP', percentage: 70 },
+            { name: 'Functional/procedural', percentage: 50 }
         ],
         web: [
-            { name: 'HTML/CSS', percentage: 95 },
-            { name: 'JavaScript', percentage: 90 },
-            { name: 'React', percentage: 85 },
-            { name: 'Node.js', percentage: 80 }
+            { name: 'HTML/CSS', percentage: 85 },
+            { name: 'JavaScript/typescript', percentage: 70 },
+            { name: 'React', percentage: 35 },
+            { name: 'Django', percentage: 40 },
         ],
         ai: [
-            { name: 'Machine Learning', percentage: 80 },
-            { name: 'Deep Learning', percentage: 75 },
-            { name: 'Natural Language Processing', percentage: 70 },
-            { name: 'Computer Vision', percentage: 65 }
+            { name: 'Machine Learning', percentage: 40 },
+            { name: 'MCP', percentage: 15 },
+            { name: 'Python', percentage: 70 }
         ]
     };
 
@@ -143,6 +144,11 @@ function getWidthClass(percentage) {
     if (percentage >= 70) return 'w-7/10';
     if (percentage >= 60) return 'w-6/10';
     if (percentage >= 50) return 'w-5/10';
+    if (percentage >= 40) return 'w-4/10';
+    if (percentage >= 30) return 'w-3/10';
+    if (percentage >= 20) return 'w-2/10';
+    if (percentage >= 10) return 'w-1/10';
+
     return 'w-4/10';
 }
 

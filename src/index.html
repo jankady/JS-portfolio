@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en" class="dark">
+<html class="dark" lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <link href="./output.css" rel="stylesheet">
     <link href="../styles.css" rel="stylesheet">
     <title>Kaduch Jan | Main </title>
@@ -20,16 +20,16 @@
 
             <!-- Desktop menu  -->
             <ul class="hidden md:flex gap-6 items-center text-secondary align-middle ">
-                <li><a href="index.html" class="hover:text-primary font-bold"><span class="text-primary ">#</span>Main
+                <li><a class="hover:text-primary font-bold" href="index.html"><span class="text-primary ">#</span>Main
                     page</a></li>
-                <li><a href="aboutme.html" class="hover:text-primary"><span class="text-primary ">#</span>About me</a>
+                <li><a class="hover:text-primary" href="aboutme.html"><span class="text-primary ">#</span>About me</a>
                 </li>
-                <li><a href="projects.html" class="hover:text-primary"><span class="text-primary ">#</span>Projects</a>
+                <li><a class="hover:text-primary" href="projects.html"><span class="text-primary ">#</span>Projects</a>
                 </li>
                 <li class="ml-9 mt-2">
                     <!-- Theme Toggle Slider -->
                     <label class="relative inline-block w-16 h-8 cursor-pointer">
-                        <input type="checkbox" id="theme-toggle" class="sr-only peer">
+                        <input class="sr-only peer" id="theme-toggle" type="checkbox">
                         <div class="w-full h-full bg-gray-400 rounded-full peer-checked:bg-primary transition-all"></div>
                         <div class="absolute top-1 left-1 bg-white w-6 h-6 rounded-full transition-all
                          peer-checked:translate-x-8 flex items-center justify-center text-xs">
@@ -43,7 +43,7 @@
                 <!-- slider for mobiles-->
                 <div class="md:hidden flex justify-end py-2 ">
                     <label class="relative inline-block w-16 h-8 cursor-pointer">
-                        <input type="checkbox" id="theme-toggle-mobile" class="sr-only peer">
+                        <input class="sr-only peer" id="theme-toggle-mobile" type="checkbox">
                         <div class="w-full h-full bg-gray-400 rounded-full peer-checked:bg-primary transition-all"></div>
                         <div class="absolute top-1 left-1 bg-white w-6 h-6 rounded-full transition-all peer-checked:translate-x-8 flex items-center justify-center text-xs">
                             <span class="theme-icon-mobile">☀️</span>
@@ -52,10 +52,10 @@
                 </div>
 
                 <!-- hamburger menu Icon -->
-                <button id="mobile-menu-button" class="md:hidden text-secondary ml-10">
+                <button class="md:hidden text-secondary ml-10" id="mobile-menu-button">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M4 6h16M4 12h16M4 18h16"></path>
+                        <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"
+                              stroke-width="2"></path>
                     </svg>
                 </button>
             </div>
@@ -63,13 +63,13 @@
         </div>
 
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden pb-4">
+        <div class="hidden md:hidden pb-4" id="mobile-menu">
             <ul class="flex flex-col gap-3 text-secondary text-2xl">
-                <li><a href="index.html" class="hover:text-primary font-bold"><span class="text-primary ">#</span>Main
+                <li><a class="hover:text-primary font-bold" href="index.html"><span class="text-primary ">#</span>Main
                     page</a></li>
-                <li><a href="aboutme.html" class="hover:text-primary"><span class="text-primary ">#</span>About me</a>
+                <li><a class="hover:text-primary" href="aboutme.html"><span class="text-primary ">#</span>About me</a>
                 </li>
-                <li><a href="projects.html" class="hover:text-primary"><span class="text-primary ">#</span>Projects</a>
+                <li><a class="hover:text-primary" href="projects.html"><span class="text-primary ">#</span>Projects</a>
                 </li>
             </ul>
         </div>
@@ -89,16 +89,19 @@
                 <div>
                     <div class="bullet-points my-4">
                         <ul class="list-none list-inside space-y-4 text-paragraph text-xs">
-                            <li class="flex gap-2 content-center items-center"><img src="../img/location.png"
-                                                                                    alt="location icon"
-                                                                                    class="w-9 justify-center"> Frenštát,
-                                Czechia
+                            <li class="flex gap-2 content-center items-center">
+                                <img alt="location icon"
+                                     class="w-9 justify-center" src="../img/location.png">
+                                Frenštát, Czechia
                             </li>
-                            <li class="flex gap-2 content-center items-center"><img src="../img/age.png" alt="age icon"
-                                                                                    class="w-10"> 20 Years Old
+                            <li class="flex gap-2 content-center items-center">
+                                <img alt="age icon" class="w-10"
+                                     src="../img/age.png">
+                                20 Years Old
                             </li>
-                            <li class="flex gap-2 content-center items-center"><img src="../img/experience.png"
-                                                                                    alt="experience icon" class="w-10">4+
+                            <li class="flex gap-2 content-center items-center">
+                                <img alt="experience icon"
+                                     class="w-10" src="../img/experience.png">4+
                                 Years of Experience
                             </li>
                         </ul>
@@ -111,47 +114,45 @@
                         <span class="text-primary">full-stack developing</span> and <span class="text-primary">AI</span>.
                         I love to keep learning new things in It industry every day.</p>
                     <button class="hidden md:block from-secondary/2 to-transparent border border-secondary/5 rounded-2xl px-5 py-3 shadow-lg mt-10 md:ml-10
-                hover:text-primary cursor-pointer hover:font-bold hover:shadow-xs hover:shadow-primary">Contact Me</button>
+                hover:text-primary cursor-pointer hover:font-bold hover:shadow-xs hover:shadow-primary">Contact Me
+                    </button>
                 </div>
 
             </div>
 
             <div class="me-header flex content-center justify-center mt-7">
-                <img src="../img/profile_picture.jpg" alt="my profile picture"
-                     class="w-3xs h-3xs object-cover rounded-full shadow-lg shadow-slate-950"/>
+                <img alt="my profile picture" class="w-3xs h-3xs object-cover rounded-full shadow-lg shadow-slate-950"
+                     src="../img/profile_picture.jpg"/>
             </div>
         </div>
-
-
     </header>
     <!--    main-->
     <main class="block px-4 py-5">
-
         <!--    Skill-->
-        <section id="skills-section" class="max-w-3xl mx-auto my-6">
+        <section class="max-w-3xl mx-auto my-6" id="skills-section">
             <div class="flex align-middle mb-4">
                 <h3 class="text-2xl  text-white "><span class="text-primary">#</span>Skills</h3>
                 <hr class="flex-grow border-t text-primary ml-4 mt-4">
             </div>
             <div class="bg-gradient-to-b from-secondary/2 to-transparent border border-secondary/5 rounded-2xl p-6 shadow-lg shadow-primary/10">
-                <p class="text-sm text-paragraph mt-0.5">Hlavní oblasti, na kterých pracuji</p>
+                <p class="text-sm text-paragraph mt-0.5">Main fields I am interested in</p>
 
                 <!-- skill pills -->
                 <div class="mt-4 flex flex-wrap gap-2">
-                    <span id="skill-cyber"
-                          class="px-3 py-1 rounded-full bg-primary/75 text-secondary text-sm font-bold cursor-pointer">Cybersecurity</span>
-                    <span id="skill-3d"
-                          class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold cursor-pointer">3D graphic</span>
-                    <span id="skill-lowend"
-                          class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold cursor-pointer">Low-end programming</span>
-                    <span id="skill-web"
-                          class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold cursor-pointer">web devolopment</span>
-                    <span id="skill-ai"
-                          class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold cursor-pointer">AI and ML</span>
+                    <span class="px-3 py-1 rounded-full bg-primary/75 text-secondary text-sm font-bold cursor-pointer"
+                          id="skill-cyber">Cybersecurity</span>
+                    <span class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold cursor-pointer"
+                          id="skill-3d">3D graphic</span>
+                    <span class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold cursor-pointer"
+                          id="skill-programming">programming knowledge</span>
+                    <span class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold cursor-pointer"
+                          id="skill-web">web devolopment</span>
+                    <span class="px-3 py-1 rounded-full bg-secondary/15 text-secondary text-sm font-bold cursor-pointer"
+                          id="skill-ai">AI and ML</span>
                 </div>
 
                 <!-- Kontejner pro dynamické skill bary -->
-                <div id="skills-container" class="mt-4 space-y-4">
+                <div class="mt-4 space-y-4" id="skills-container">
                     <!-- Skill bary se vytvoří dynamicky pomocí JavaScriptu -->
                 </div>
             </div>
@@ -159,7 +160,7 @@
         </section>
 
         <!--    Contact-->
-        <section id="form-section" class="max-w-3xl mx-auto">
+        <section class="max-w-3xl mx-auto" id="form-section">
             <div class="flex align-middle mb-4">
                 <h3 class="text-2xl  text-white "><span class="text-primary">#</span>Form</h3>
                 <hr class="flex-grow border-t text-primary ml-4 mt-4">
@@ -169,16 +170,16 @@
                 <p class="text-sm text-white/75 mt-1">Rychle a přehledně — napište mi nebo zavolejte</p>
 
                 <ul class="mt-4 space-y-2 text-white">
-                    <li>Email: <a href="mailto:jan@example.com" class="text-indigo-400">jan@example.com</a></li>
-                    <li>Telefon: <a href="tel:+420000000000" class="text-indigo-400">+420 000 000 000</a></li>
+                    <li>Email: <a class="text-indigo-400" href="mailto:jan@example.com">jan@example.com</a></li>
+                    <li>Telefon: <a class="text-indigo-400" href="tel:+420000000000">+420 000 000 000</a></li>
                     <li>Lokace: Ostrava, Česká republika</li>
                 </ul>
 
                 <div class="mt-5 flex flex-wrap gap-3">
-                    <a href="mailto:jan@example.com"
-                       class="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold px-4 py-2 rounded-lg shadow">Napište
+                    <a class="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold px-4 py-2 rounded-lg shadow"
+                       href="mailto:jan@example.com">Napište
                         mi</a>
-                    <a href="projects.html" class="inline-block border border-white/6 text-white px-4 py-2 rounded-lg">Projekty</a>
+                    <a class="inline-block border border-white/6 text-white px-4 py-2 rounded-lg" href="projects.html">Projekty</a>
                 </div>
 
             </div>
