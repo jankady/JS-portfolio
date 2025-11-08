@@ -1,16 +1,17 @@
+// Elementy pro theme toggle
+const desktopToggle = document.getElementById('theme-toggle');
+const mobileToggle = document.getElementById('theme-toggle-mobile');
 // Mobilní menu toggle
 const mobileMenuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
-
 // Vyberu vsechny skills
 const skill_list = document.querySelectorAll('[id^="skill-"]'); // ^= starts with
-
 
 // Theme toggle - slider verze s ikonou
 function toggleTheme() {
     const html = document.documentElement;
     const isDark = html.classList.contains('dark');
-    const newTheme = isDark ? 'light' : 'dark';
+    const newTheme = isDark ? 'light' : 'dark'; // ternary operator
 
     html.classList.remove('light', 'dark');
     html.classList.add(newTheme);
@@ -32,16 +33,15 @@ function toggleTheme() {
 }
 
 function initializeTheme() {
-    // Localstorage je vlastnot window a uklada se mi tam thema
+    // Localstorage je vlastnost window a ukládá se mi tam thema
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.classList.add(savedTheme);
 
-    const desktopToggle = document.getElementById('theme-toggle');
-    const mobileToggle = document.getElementById('theme-toggle-mobile');
+
     const desktopIcon = document.querySelector('.theme-icon');
     const mobileIcon = document.querySelector('.theme-icon-mobile');
 
-    // Nastav správnou pozici slideru a ikonu
+    // Nastaim správnou pozici slideru a ikonu
     if (desktopToggle) {
         desktopToggle.checked = (savedTheme === 'dark');
         desktopToggle.addEventListener('change', toggleTheme);
@@ -56,6 +56,7 @@ function initializeTheme() {
     if (mobileIcon) mobileIcon.textContent = (savedTheme === 'dark') ? '🌙' : '☀️';
 }
 
+// Aktualizace progress baru v pravo při scrollování
 function updateProgressBar() {
     const scrollProgress = document.getElementById('scroll-progress-fill');
     const scrollTop = window.scrollY;
@@ -178,6 +179,10 @@ skill_list.forEach(list => {
         handleSkillInteraction(skillType);
     });
 });
+
+// Event listenery pro theme toggly
+desktopToggle.addEventListener('change', toggleTheme);
+mobileToggle.addEventListener('change', toggleTheme);
 
 // Toggle mobilního menu a změna mezi krizkem a hamburgerem
 mobileMenuButton.addEventListener('click', () => {
