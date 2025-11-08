@@ -29,22 +29,21 @@ function toggleTheme() {
     const headerIcon2 = document.getElementById('header-icon-2');
     const headerIcon3 = document.getElementById('header-icon-3');
 
-    if (desktopToggle || mobileToggle){
-    desktopToggle.checked = (newTheme === 'dark');
-    mobileToggle.checked = (newTheme === 'dark');
-    desktopIcon.textContent = (newTheme === 'dark') ? '🌙' : '☀️';
-    mobileIcon.textContent = (newTheme === 'dark') ? '🌙' : '☀️';
+    if (desktopToggle || mobileToggle) {
+        desktopToggle.checked = (newTheme === 'dark');
+        mobileToggle.checked = (newTheme === 'dark');
+        desktopIcon.textContent = (newTheme === 'dark') ? '🌙' : '☀️';
+        mobileIcon.textContent = (newTheme === 'dark') ? '🌙' : '☀️';
 
-    if (newTheme === 'dark') {
-        headerIcon1.src = '../img/age_dark.png';
-        headerIcon2.src = '../img/experience_dark.png';
-        headerIcon3.src = '../img/location_dark.png';
-    }
-    else {
-        headerIcon1.src = '../img/age_light.png';
-        headerIcon2.src = '../img/experience_light.png';
-        headerIcon3.src = '../img/location_light.png';
-    }
+        if (newTheme === 'dark') {
+            headerIcon1.src = '../img/age_dark.png';
+            headerIcon2.src = '../img/experience_dark.png';
+            headerIcon3.src = '../img/location_dark.png';
+        } else {
+            headerIcon1.src = '../img/age_light.png';
+            headerIcon2.src = '../img/experience_light.png';
+            headerIcon3.src = '../img/location_light.png';
+        }
     }
 
 }
@@ -58,6 +57,9 @@ function initializeTheme() {
     const desktopIcon = document.querySelector('.theme-icon');
     const mobileIcon = document.querySelector('.theme-icon-mobile');
 
+    const headerIcon1 = document.getElementById('header-icon-1');
+    const headerIcon2 = document.getElementById('header-icon-2');
+    const headerIcon3 = document.getElementById('header-icon-3');
     // Nastaim správnou pozici slideru a ikonu
     if (desktopToggle) {
         desktopToggle.checked = (savedTheme === 'dark');
@@ -71,6 +73,16 @@ function initializeTheme() {
 
     if (desktopIcon) desktopIcon.textContent = (savedTheme === 'dark') ? '🌙' : '☀️';
     if (mobileIcon) mobileIcon.textContent = (savedTheme === 'dark') ? '🌙' : '☀️';
+
+    if (savedTheme === 'dark') {
+        headerIcon1.src = '../img/age_dark.png';
+        headerIcon2.src = '../img/experience_dark.png';
+        headerIcon3.src = '../img/location_dark.png';
+    } else {
+        headerIcon1.src = '../img/age_light.png';
+        headerIcon2.src = '../img/experience_light.png';
+        headerIcon3.src = '../img/location_light.png';
+    }
 }
 
 // Aktualizace progress baru v pravo při scrollování
@@ -183,7 +195,7 @@ skill_list.forEach(list => {
     //kontroluji kliknuti pro kazdy jednotlivy skill
     list.addEventListener('click', event => {
         // Odstranit aktivní třídu ze všech
-        skill_list.forEach( element => {
+        skill_list.forEach(element => {
             element.classList.remove('bg-primary/75');
             element.classList.add('bg-secondary/15');
         });
