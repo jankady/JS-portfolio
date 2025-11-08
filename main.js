@@ -2,18 +2,9 @@
 const mobileMenuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
 
-if (mobileMenuButton && mobileMenu) {
-    mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
+// Vyberu vsechny skills
+const skill_list = document.querySelectorAll('[id^="skill-"]'); // ^= starts with
 
-        const svg = mobileMenuButton.querySelector('svg path');
-        if (mobileMenu.classList.contains('hidden')) {
-            svg.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
-        } else {
-            svg.setAttribute('d', 'M6 18L18 6M6 6l12 12');
-        }
-    });
-}
 
 // Theme toggle - slider verze s ikonou
 function toggleTheme() {
@@ -41,6 +32,7 @@ function toggleTheme() {
 }
 
 function initializeTheme() {
+    // Localstorage je vlastnot window a uklada se mi tam thema
     const savedTheme = localStorage.getItem('theme') || 'light';
     document.documentElement.classList.add(savedTheme);
 
@@ -73,58 +65,62 @@ function updateProgressBar() {
     scrollProgress.style.height = scrollPercent + '%';
 }
 
-// Skills bar interakce
+// Načte skill podle vybrané kategorie
 function handleSkillInteraction(skillType) {
     const skillData = {
-        cyber: [
-            { name: 'HackTheBox', percentage: 20 },
-            { name: 'Network security (ACL, STP etc.)', percentage: 70},
-            { name: 'TryHackMe', percentage: 40 }
+        'cyber': [
+            {name: 'HackTheBox', percentage: 20},
+            {name: 'Network security (ACL, STP etc.)', percentage: 70},
+            {name: 'TryHackMe', percentage: 40}
         ],
         '3d': [
-            { name: 'Blender', percentage: 45 },
-            { name: 'Unreal Engine', percentage: 60 },
-            { name: 'Texturing', percentage: 32 },
-            { name: 'Modelling', percentage: 48 },
-            { name: 'Animation', percentage: 65 }
+            {name: 'Blender', percentage: 45},
+            {name: 'Unreal Engine', percentage: 60},
+            {name: 'Texturing', percentage: 32},
+            {name: 'Modelling', percentage: 48},
+            {name: 'Animation', percentage: 65}
         ],
-        programming: [
-            { name: 'rust ', percentage: 10 },
-            { name: 'C', percentage: 40 },
-            { name: 'Java', percentage: 75 },
-            { name: 'Python', percentage: 87 },
-            { name: 'OOP', percentage: 70 },
-            { name: 'Functional/procedural', percentage: 50 }
+        'programming': [
+            {name: 'rust ', percentage: 10},
+            {name: 'C', percentage: 40},
+            {name: 'Java', percentage: 75},
+            {name: 'Python', percentage: 87},
+            {name: 'OOP', percentage: 70},
+            {name: 'Functional/procedural', percentage: 50}
         ],
-        web: [
-            { name: 'HTML/CSS', percentage: 85 },
-            { name: 'JavaScript/typescript', percentage: 70 },
-            { name: 'React', percentage: 35 },
-            { name: 'Django', percentage: 40 },
+        'web': [
+            {name: 'HTML/CSS', percentage: 85},
+            {name: 'JavaScript/typescript', percentage: 70},
+            {name: 'React', percentage: 35},
+            {name: 'Django', percentage: 40},
         ],
-        ai: [
-            { name: 'Machine Learning', percentage: 40 },
-            { name: 'MCP', percentage: 15 },
-            { name: 'Python', percentage: 70 }
+        'ai': [
+            {name: 'Machine Learning', percentage: 40},
+            {name: 'MCP', percentage: 15},
+            {name: 'Python', percentage: 70}
         ]
     };
 
+    // vrati jenom strukturu pozadovaneho skillu
     updateSkillBars(skillData[skillType]);
 }
 
+// Vykreslí skill bary pro jednotlivou kategorii
 function updateSkillBars(skills) {
     const skillsContainer = document.getElementById('skills-container');
 
-    // Vyčistit kontejner
+    // Vzčistí kontejner
     skillsContainer.innerHTML = '';
 
-    // Vytvořit nové skill bary podle dat
+    // Vytvořit nové skills bary podle dat
     skills.forEach((skill, index) => {
         const skillBarDiv = document.createElement('div');
         skillBarDiv.id = `skill-bar-${index}`;
 
+        // Získá šířku pro tailwind
         const widthClass = getWidthClass(skill.percentage);
 
+        // jeden řádek skillu
         skillBarDiv.innerHTML = `
             <div class="flex justify-between text-sm text-secondary">
                 <span class="font-bold skill-name">${skill.name}</span>
@@ -139,6 +135,7 @@ function updateSkillBars(skills) {
     });
 }
 
+// Vrátí Tailwind šířku podle procent
 function getWidthClass(percentage) {
     if (percentage >= 90) return 'w-9/10';
     if (percentage >= 80) return 'w-8/10';
@@ -153,49 +150,50 @@ function getWidthClass(percentage) {
     return 'w-4/10';
 }
 
-// Centrální DOMContentLoaded event listener
-document.addEventListener('DOMContentLoaded', function() {
+// První nacteni stranky
+document.addEventListener('DOMContentLoaded', () => {
     // Inicializace tématu
     initializeTheme();
-
     // Inicializace progress baru
     updateProgressBar();
-
-    // Inicializace skills
+    // Inicializace skillu
     handleSkillInteraction('cyber');
+});
 
-    // Nastavení výchozího aktivního skill pillu
-    const defaultPill = document.getElementById('skill-cyber');
-    if (defaultPill) {
-        defaultPill.classList.add('bg-primary/75');
-        defaultPill.classList.remove('bg-secondary/15');
-    }
-
-    // Event listeners pro skill pills
-    const skill_list = document.querySelectorAll('[id^="skill-"]');
-    console.log('Nalezené skill pills:', skill_list.length); // Debug
-    
-    skill_list.forEach(list => {
-        list.addEventListener('click', function() {
-            console.log('Kliknuto na:', this.id); // Debug
-            
-            // Odstranit aktivní třídu ze všech pills
-            skill_list.forEach(p => {
-                p.classList.remove('bg-primary/75');
-                p.classList.add('bg-secondary/15');
-            });
-
-            // Přidat aktivní třídu na kliknutý pill
-            this.classList.remove('bg-secondary/15');
-            this.classList.add('bg-primary/75');
-
-            const skillType = this.id.replace('skill-', '');
-            console.log('Skill type:', skillType); // Debug
-            handleSkillInteraction(skillType);
+// Poslouchání kliknutí na jednotlivé skilly
+skill_list.forEach(list => {
+    //kontroluji kliknuti pro kazdy jednotlivy skill
+    list.addEventListener('click', event => {
+        // Odstranit aktivní třídu ze všech
+        skill_list.forEach( element => {
+            element.classList.remove('bg-primary/75');
+            element.classList.add('bg-secondary/15');
         });
+
+        // Přidat aktivní třídu na kliknutý skill
+        event.currentTarget.classList.remove('bg-secondary/15');
+        event.currentTarget.classList.add('bg-primary/75');
+
+        const skillType = event.currentTarget.id.replace('skill-', '');
+        handleSkillInteraction(skillType);
     });
 });
 
-// Event listeners pro ostatní funkce
+// Toggle mobilního menu a změna mezi krizkem a hamburgerem
+mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+
+    const svg = mobileMenuButton.querySelector('svg path');
+    if (mobileMenu.classList.contains('hidden')) {
+        svg.setAttribute('d', 'M4 6h16M4 12h16M4 18h16');
+    } else {
+        svg.setAttribute('d', 'M6 18L18 6M6 6l12 12');
+    }
+});
+
+// Ukaž aktuální rok
+document.getElementById("year").innerHTML = new Date().getFullYear();
+
+// Event listeners pro scrolování a načitání
 window.addEventListener('scroll', updateProgressBar);
 window.addEventListener('load', updateProgressBar);
