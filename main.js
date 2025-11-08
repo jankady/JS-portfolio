@@ -63,6 +63,7 @@ function initializeTheme() {
     if (desktopIcon) desktopIcon.textContent = (savedTheme === 'dark') ? '🌙' : '☀️';
     if (mobileIcon) mobileIcon.textContent = (savedTheme === 'dark') ? '🌙' : '☀️';
 }
+
 function updateProgressBar() {
     const scrollProgress = document.getElementById('scroll-progress-fill');
     const scrollTop = window.scrollY;
@@ -130,7 +131,7 @@ function updateSkillBars(skills) {
                 <span class="text skill-percentage">${skill.percentage}%</span>
             </div>
             <div class="w-full h-2 bg-paragraph/10 rounded-full mt-2 overflow-hidden">
-                <div class="h-full bg-gradient-to-r from-indigo-500 to-primary skill-progress ${widthClass}"></div>
+                <div class="h-full bg-gradient-to-r from-fourth to-primary skill-progress ${widthClass}"></div>
             </div>
         `;
 

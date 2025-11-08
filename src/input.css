@@ -9,6 +9,7 @@
     --color-background: #282C33;
     --color-third: #121317;
     --color-paragraph: #CCCCCC;
+    --color-fourth: #615fff;
     --font-inter: 'Inter', sans-serif;
 }
 
@@ -18,13 +19,15 @@ html.dark {
     --color-background: #282C33;
     --color-paragraph: #CCCCCC;
     --color-third: #121317;
+    --color-fourth: #615fff;
 }
 html.light {
     --color-primary: #c837ed;
     --color-secondary: #000000;
-    --color-background: #e1e1e1;
+    --color-background: #f4f4ff;
     --color-paragraph: #333333;
-    --color-third: #e4b5f6;
+    --color-third: #c56eda;
+    --color-fourth: #615fff;
 }
 
 /* Animace mobilního menu */
