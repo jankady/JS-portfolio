@@ -25,11 +25,28 @@ function toggleTheme() {
     const desktopIcon = document.querySelector('.theme-icon');
     const mobileIcon = document.querySelector('.theme-icon-mobile');
 
-    if (desktopToggle) desktopToggle.checked = (newTheme === 'dark');
-    if (mobileToggle) mobileToggle.checked = (newTheme === 'dark');
+    const headerIcon1 = document.getElementById('header-icon-1');
+    const headerIcon2 = document.getElementById('header-icon-2');
+    const headerIcon3 = document.getElementById('header-icon-3');
 
-    if (desktopIcon) desktopIcon.textContent = (newTheme === 'dark') ? '🌙' : '☀️';
-    if (mobileIcon) mobileIcon.textContent = (newTheme === 'dark') ? '🌙' : '☀️';
+    if (desktopToggle || mobileToggle){
+    desktopToggle.checked = (newTheme === 'dark');
+    mobileToggle.checked = (newTheme === 'dark');
+    desktopIcon.textContent = (newTheme === 'dark') ? '🌙' : '☀️';
+    mobileIcon.textContent = (newTheme === 'dark') ? '🌙' : '☀️';
+
+    if (newTheme === 'dark') {
+        headerIcon1.src = '../img/age_dark.png';
+        headerIcon2.src = '../img/experience_dark.png';
+        headerIcon3.src = '../img/location_dark.png';
+    }
+    else {
+        headerIcon1.src = '../img/age_light.png';
+        headerIcon2.src = '../img/experience_light.png';
+        headerIcon3.src = '../img/location_light.png';
+    }
+    }
+
 }
 
 function initializeTheme() {
