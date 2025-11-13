@@ -26,7 +26,7 @@ html.light {
     --color-secondary: #000000;
     --color-background: #f4f4ff;
     --color-paragraph: #333333;
-    --color-third: #c56eda;
+    --color-third: #cfcfcf;
     --color-fourth: #615fff;
 }
 
@@ -37,26 +37,4 @@ html.light {
 
 
 
-/* Vlastní animace pro Tailwind v4 */
-@keyframes typing {
-    0% {
-        width: 0%;
-        visibility: hidden;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-    100% {
-        border-color: white;
-    }
-}
-
-@utility animate-typing {
-    animation: typing 2s steps(20) infinite alternate, blink 0.7s infinite;
-}
+/* Vlastní animace */
