@@ -1,0 +1,323 @@
+<!doctype html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="./output.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+    <title>Kaduch Jan | Main </title>
+</head>
+<body class="bg-background font-inter">
+
+<!--navigation-->
+<nav class="bg-background  border-primary py-1 border-b sticky top-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16 align-middle">
+            <!-- Name-->
+            <div class="text-primary font-bold text-xl nav-name">
+                Jan
+            </div>
+
+            <!-- Desktop menu  -->
+            <ul class="hidden md:flex gap-6 items-center text-secondary align-middle ">
+                <li><a class="hover:text-primary" href="index.html"><span class="text-primary">#</span>Main
+                    page</a></li>
+                <li><a class="hover:text-primary font-bold" href="aboutme.html"><span class="text-primary">#</span>About me</a>
+                </li>
+                <li><a class="hover:text-primary" href="projects.html"><span class="text-primary">#</span>Projects</a>
+                </li>
+                <li class="ml-9 mt-2">
+                    <!-- Theme Toggle Slider -->
+                    <label class="relative inline-block w-16 h-8 cursor-pointer">
+                        <input class="sr-only peer" id="theme-toggle" type="checkbox">
+                        <div class="w-full h-full bg-gray-400 rounded-full peer-checked:bg-primary transition-all"></div>
+                        <div class="absolute top-1 left-1 bg-white w-6 h-6 rounded-full transition-all
+                         peer-checked:translate-x-8 flex items-center justify-center text-xs">
+                            <span class="theme-icon">☀️</span>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+
+            <div class="flex">
+                <!-- slider for mobiles-->
+                <div class="md:hidden flex justify-end py-2 ">
+                    <label class="relative inline-block w-16 h-8 cursor-pointer">
+                        <input class="sr-only peer" id="theme-toggle-mobile" type="checkbox">
+                        <div class="w-full h-full bg-gray-400 rounded-full peer-checked:bg-primary transition-all"></div>
+                        <div class="absolute top-1 left-1 bg-white w-6 h-6 rounded-full transition-all peer-checked:translate-x-8 flex items-center justify-center text-xs">
+                            <span class="theme-icon-mobile">☀️</span>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- hamburger menu Icon -->
+                <button class="md:hidden text-secondary ml-10" id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"
+                              stroke-width="2"></path>
+                    </svg>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden pb-4" id="mobile-menu">
+            <ul class="flex flex-col gap-3 text-secondary text-2xl">
+                <li><a class="hover:text-primary" href="index.html"><span class="text-primary ">#</span>Main
+                    page</a></li>
+                <li><a class="hover:text-primary font-bold" href="aboutme.html"><span class="text-primary ">#</span>About me</a>
+                </li>
+                <li><a class="hover:text-primary" href="projects.html"><span class="text-primary ">#</span>Projects</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--scroll bar-->
+<div id="scroll-progress">
+    <div id="scroll-progress-fill"></div>
+</div>
+<!--header and main-->
+<div class="container w-3/4 block mx-auto">
+
+    <!--    main-->
+    <main class="block px-4 py-5">
+
+        <!-- 1. INTRO / HERO SEKCE -->
+        <section class="max-w-3xl mx-auto my-6" id="intro-section">
+            <div class="flex align-middle mb-4">
+                <h3 class="text-2xl text-secondary"><span class="text-primary">#</span>Who I Am</h3>
+                <hr class="flex-grow border-t text-primary ml-4 mt-4">
+            </div>
+            <div class="bg-gradient-to-b from-secondary/2 to-transparent border border-secondary/5 rounded-2xl p-6 shadow-lg shadow-primary/10">
+                <p class="text-lg text-secondary font-semibold mb-3">Hi, I'm Jan - Cybersecurity Enthusiast & Developer</p>
+                <p class="text-paragraph leading-relaxed">
+                    <!-- Krátký úvod o tobě - 2-3 věty -->
+                    <!-- Např: "Jsem student se zájmem o kyberbezpečnost a vývoj..." -->
+                </p>
+            </div>
+        </section>
+
+        <!-- 2. MY JOURNEY / STORY -->
+        <section class="max-w-3xl mx-auto my-6" id="journey-section">
+            <div class="flex align-middle mb-4">
+                <h3 class="text-2xl text-secondary"><span class="text-primary">#</span>My Journey</h3>
+                <hr class="flex-grow border-t text-primary ml-4 mt-4">
+            </div>
+            <div class="bg-gradient-to-b from-secondary/2 to-transparent border border-secondary/5 rounded-2xl p-6 shadow-lg shadow-primary/10">
+                <div class="space-y-4">
+                    <!-- Timeline položky -->
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-2 bg-primary rounded-full"></div>
+                        <div>
+                            <h4 class="text-secondary font-bold mb-1">
+                                <!-- Rok/Období - např: "2023 - Present" -->
+                            </h4>
+                            <p class="text-paragraph">
+                                <!-- Co děláš/studuješ -->
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="flex-shrink-0 w-2 bg-primary/50 rounded-full"></div>
+                        <div>
+                            <h4 class="text-secondary font-bold mb-1">
+                                <!-- Další období -->
+                            </h4>
+                            <p class="text-paragraph">
+                                <!-- Popis -->
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Přidej další položky podle potřeby -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. EXPERTISE / SKILLS -->
+        <section class="max-w-3xl mx-auto my-6" id="expertise-section">
+            <div class="flex align-middle mb-4">
+                <h3 class="text-2xl text-secondary"><span class="text-primary">#</span>What I Do</h3>
+                <hr class="flex-grow border-t text-primary ml-4 mt-4">
+            </div>
+            <div class="bg-gradient-to-b from-secondary/2 to-transparent border border-secondary/5 rounded-2xl p-6 shadow-lg shadow-primary/10">
+                <p class="text-sm text-paragraph mb-4">Areas where I focus my energy and skills</p>
+
+                <!-- Grid of expertise cards -->
+                <div class="grid md:grid-cols-2 gap-4">
+                    <!-- Card 1 -->
+                    <div class="bg-secondary/5 border border-secondary/10 rounded-lg p-4 hover:border-primary/30 transition-all">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="text-2xl">🔒</span>
+                            <h4 class="text-secondary font-bold">Cybersecurity</h4>
+                        </div>
+                        <p class="text-sm text-paragraph">
+                            <!-- Popis co děláš v cybersecurity -->
+                        </p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-0.5 bg-primary/20 text-primary text-xs rounded"><!-- skill --></span>
+                            <span class="px-2 py-0.5 bg-primary/20 text-primary text-xs rounded"><!-- skill --></span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-secondary/5 border border-secondary/10 rounded-lg p-4 hover:border-primary/30 transition-all">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="text-2xl">💻</span>
+                            <h4 class="text-secondary font-bold">Web Development</h4>
+                        </div>
+                        <p class="text-sm text-paragraph">
+                            <!-- Popis -->
+                        </p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-0.5 bg-primary/20 text-primary text-xs rounded"><!-- skill --></span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-secondary/5 border border-secondary/10 rounded-lg p-4 hover:border-primary/30 transition-all">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="text-2xl">🎨</span>
+                            <h4 class="text-secondary font-bold">3D Graphics</h4>
+                        </div>
+                        <p class="text-sm text-paragraph">
+                            <!-- Popis -->
+                        </p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-0.5 bg-primary/20 text-primary text-xs rounded"><!-- skill --></span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-secondary/5 border border-secondary/10 rounded-lg p-4 hover:border-primary/30 transition-all">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="text-2xl">🤖</span>
+                            <h4 class="text-secondary font-bold">AI & Machine Learning</h4>
+                        </div>
+                        <p class="text-sm text-paragraph">
+                            <!-- Popis -->
+                        </p>
+                        <div class="mt-3 flex flex-wrap gap-1">
+                            <span class="px-2 py-0.5 bg-primary/20 text-primary text-xs rounded"><!-- skill --></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. APPROACH / PHILOSOPHY -->
+        <section class="max-w-3xl mx-auto my-6" id="approach-section">
+            <div class="flex align-middle mb-4">
+                <h3 class="text-2xl text-secondary"><span class="text-primary">#</span>My Approach</h3>
+                <hr class="flex-grow border-t text-primary ml-4 mt-4">
+            </div>
+            <div class="bg-gradient-to-b from-secondary/2 to-transparent border border-secondary/5 rounded-2xl p-6 shadow-lg shadow-primary/10">
+                <div class="grid md:grid-cols-3 gap-4">
+                    <!-- Value 1 -->
+                    <div class="text-center">
+                        <div class="text-3xl mb-2">⚡</div>
+                        <h4 class="text-secondary font-bold mb-2"><!-- Např: "Fast Learner" --></h4>
+                        <p class="text-sm text-paragraph">
+                            <!-- Popis tvého přístupu -->
+                        </p>
+                    </div>
+
+                    <!-- Value 2 -->
+                    <div class="text-center">
+                        <div class="text-3xl mb-2">🎯</div>
+                        <h4 class="text-secondary font-bold mb-2"><!-- Např: "Detail-Oriented" --></h4>
+                        <p class="text-sm text-paragraph">
+                            <!-- Popis -->
+                        </p>
+                    </div>
+
+                    <!-- Value 3 -->
+                    <div class="text-center">
+                        <div class="text-3xl mb-2">🚀</div>
+                        <h4 class="text-secondary font-bold mb-2"><!-- Např: "Always Improving" --></h4>
+                        <p class="text-sm text-paragraph">
+                            <!-- Popis -->
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. BEYOND WORK / INTERESTS -->
+        <section class="max-w-3xl mx-auto my-6" id="interests-section">
+            <div class="flex align-middle mb-4">
+                <h3 class="text-2xl text-secondary"><span class="text-primary">#</span>Beyond Code</h3>
+                <hr class="flex-grow border-t text-primary ml-4 mt-4">
+            </div>
+            <div class="bg-gradient-to-b from-secondary/2 to-transparent border border-secondary/5 rounded-2xl p-6 shadow-lg shadow-primary/10">
+                <p class="text-paragraph mb-4">
+                    <!-- Krátký úvod - např: "When I'm not coding or securing systems..." -->
+                </p>
+
+                <div class="flex flex-wrap gap-3">
+                    <!-- Interest badges -->
+                    <div class="flex items-center gap-2 bg-secondary/10 px-3 py-2 rounded-lg">
+                        <span>🎮</span>
+                        <span class="text-secondary text-sm"><!-- Zájem - např: "Gaming" --></span>
+                    </div>
+
+                    <div class="flex items-center gap-2 bg-secondary/10 px-3 py-2 rounded-lg">
+                        <span>📚</span>
+                        <span class="text-secondary text-sm"><!-- Zájem --></span>
+                    </div>
+
+                    <div class="flex items-center gap-2 bg-secondary/10 px-3 py-2 rounded-lg">
+                        <span>⚽</span>
+                        <span class="text-secondary text-sm"><!-- Zájem --></span>
+                    </div>
+
+                    <!-- Přidej další podle potřeby -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. STATS / FUN FACTS (volitelné) -->
+        <section class="max-w-3xl mx-auto my-6" id="stats-section">
+            <div class="flex align-middle mb-4">
+                <h3 class="text-2xl text-secondary"><span class="text-primary">#</span>Quick Stats</h3>
+                <hr class="flex-grow border-t text-primary ml-4 mt-4">
+            </div>
+            <div class="bg-gradient-to-b from-secondary/2 to-transparent border border-secondary/5 rounded-2xl p-6 shadow-lg shadow-primary/10">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                    <div>
+                        <div class="text-2xl font-bold text-primary mb-1"><!-- Číslo --></div>
+                        <div class="text-sm text-paragraph"><!-- Label - např: "Projects" --></div>
+                    </div>
+
+                    <div>
+                        <div class="text-2xl font-bold text-primary mb-1"><!-- Číslo --></div>
+                        <div class="text-sm text-paragraph"><!-- Label --></div>
+                    </div>
+
+                    <div>
+                        <div class="text-2xl font-bold text-primary mb-1"><!-- Číslo --></div>
+                        <div class="text-sm text-paragraph"><!-- Label --></div>
+                    </div>
+
+                    <div>
+                        <div class="text-2xl font-bold text-primary mb-1"><!-- Číslo --></div>
+                        <div class="text-sm text-paragraph"><!-- Label --></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</div>
+<!--footer-->
+<footer class="bg-third  text-secondary text-center p-4 mt-10 text-sm">
+    <p>Created by Jan Kaduch | <span id="year"></span></p>
+</footer>
+<script src="../main.js"></script>
+<script src="../styleScript.js"></script>
+</body>
+</html>
