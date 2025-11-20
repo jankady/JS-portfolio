@@ -1,10 +1,376 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="dark" lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="./output.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+    <title>Kaduch Jan | Projects</title>
 </head>
-<body>
+<body class="bg-background font-inter">
 
+<!--navigation-->
+<nav class="bg-background border-primary py-1 border-b sticky top-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex justify-between items-center h-16 align-middle">
+            <!-- Name-->
+            <div class="text-primary font-bold text-xl nav-name">
+                Jan
+            </div>
+
+            <!-- Desktop menu -->
+            <ul class="hidden md:flex gap-6 items-center text-secondary align-middle">
+                <li><a class="hover:text-primary" href="index.html"><span class="text-primary">#</span>Main page</a>
+                </li>
+                <li><a class="hover:text-primary" href="aboutme.html"><span class="text-primary">#</span>About me</a>
+                </li>
+                <li><a class="hover:text-primary font-bold" href="projects.html"><span class="text-primary">#</span>Projects</a>
+                </li>
+                <li class="ml-9 mt-2">
+                    <!-- Theme Toggle Slider -->
+                    <label class="relative inline-block w-16 h-8 cursor-pointer">
+                        <input class="sr-only peer" id="theme-toggle" type="checkbox">
+                        <div class="w-full h-full bg-gray-400 rounded-full peer-checked:bg-primary transition-all"></div>
+                        <div class="absolute top-1 left-1 bg-white w-6 h-6 rounded-full transition-all peer-checked:translate-x-8 flex items-center justify-center text-xs">
+                            <span class="theme-icon">☀️</span>
+                        </div>
+                    </label>
+                </li>
+            </ul>
+
+            <div class="flex">
+                <!-- slider for mobiles-->
+                <div class="md:hidden flex justify-end py-2">
+                    <label class="relative inline-block w-16 h-8 cursor-pointer">
+                        <input class="sr-only peer" id="theme-toggle-mobile" type="checkbox">
+                        <div class="w-full h-full bg-gray-400 rounded-full peer-checked:bg-primary transition-all"></div>
+                        <div class="absolute top-1 left-1 bg-white w-6 h-6 rounded-full transition-all peer-checked:translate-x-8 flex items-center justify-center text-xs">
+                            <span class="theme-icon-mobile">☀️</span>
+                        </div>
+                    </label>
+                </div>
+
+                <!-- hamburger menu Icon -->
+                <button class="md:hidden text-secondary ml-10" id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"
+                              stroke-width="2"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div class="hidden md:hidden pb-4" id="mobile-menu">
+            <ul class="flex flex-col gap-3 text-secondary text-2xl">
+                <li><a class="hover:text-primary" href="index.html"><span class="text-primary">#</span>Main page</a>
+                </li>
+                <li><a class="hover:text-primary" href="aboutme.html"><span class="text-primary">#</span>About me</a>
+                </li>
+                <li><a class="hover:text-primary font-bold" href="projects.html"><span class="text-primary">#</span>Projects</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--scroll bar-->
+<div id="scroll-progress">
+    <div id="scroll-progress-fill"></div>
+</div>
+
+<!--main-->
+<div class="container w-3/4 block mx-auto">
+    <main class="block px-4 py-5">
+
+        <!-- FEATURED PROJECT - Velký formát -->
+        <section class="max-w-4xl mx-auto my-10">
+            <div class="flex align-middle mb-4">
+                <h3 class="text-2xl text-secondary"><span class="text-primary">#</span>Featured</h3>
+                <hr class="flex-grow border-t text-primary ml-4 mt-4">
+            </div>
+
+            <!-- Featured Project Card -->
+            <div class="border border-secondary/20 rounded-xl overflow-hidden hover:border-primary/40 transition-all duration-300 shadow-lg shadow-primary/5">
+                <div class="relative bg-secondary/5 aspect-video">
+                    <img alt="Project preview" class="w-full h-full object-cover" src="C lolko projekt">
+
+                    <!-- Status Badge -->
+                    <div class="absolute top-4 right-4 bg-primary px-3 py-1 rounded-full text-background text-sm font-bold">
+                        Featured
+                    </div>
+                </div>
+
+                <!-- Project Info -->
+                <div class="p-6">
+                    <h4 class="text-2xl font-bold text-secondary mb-2">
+                        <!-- NÁZEV PROJEKTU -->
+                        Project Title
+                    </h4>
+                    <p class="text-paragraph mb-4">
+                        <!-- POPIS PROJEKTU - delší text -->
+                        Detailed description of your featured project. What technologies you used, what problems you
+                        solved, what you learned.
+                    </p>
+
+                    <!-- Tech Stack Tags -->
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full">React</span>
+                        <span class="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full">Python</span>
+                        <span class="px-3 py-1 bg-primary/20 text-primary text-sm rounded-full">MongoDB</span>
+                        <!-- Přidej další technologie -->
+                    </div>
+
+                    <!-- Links -->
+                    <div class="flex gap-3">
+                        <a class="px-4 py-2 bg-primary text-background rounded-lg hover:bg-primary/80 transition-all font-semibold" href="<!-- ODKAZ NA LIVE DEMO -->"
+                           target="_blank">
+                            Live Demo →
+                        </a>
+                        <a class="px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary/10 transition-all font-semibold" href="<!-- ODKAZ NA GITHUB -->"
+                           target="_blank">
+                            View Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WEB DEVELOPMENT PROJECTS -->
+        <section class="max-w-4xl mx-auto my-10">
+            <div class="flex align-middle mb-4">
+                <h3 class="text-2xl text-secondary"><span class="text-primary">#</span>Web Development</h3>
+                <hr class="flex-grow border-t text-primary ml-4 mt-4">
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Project Card 1 -->
+                <div class="border border-secondary/10 rounded-lg overflow-hidden hover:border-primary/30 transition-all hover:shadow-lg hover:shadow-primary/10">
+                    <!-- Thumbnail -->
+                    <div class="relative bg-secondary/5 aspect-video overflow-hidden">
+                        <img alt="Project" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                             src="<!-- OBRÁZEK -->">
+                        <!-- nebo placeholder: -->
+                        <div class="w-full h-full flex items-center justify-center text-secondary/30">
+                            <span class="text-4xl">🖼️</span>
+                        </div>
+                    </div>
+
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold text-secondary mb-2"><!-- NÁZEV --></h4>
+                        <p class="text-sm text-paragraph mb-3">
+                            <!-- KRÁTKÝ POPIS -->
+                        </p>
+
+                        <!-- Tags -->
+                        <div class="flex flex-wrap gap-1 mb-3">
+                            <span class="px-2 py-0.5 bg-primary/15 text-primary text-xs rounded">HTML</span>
+                            <span class="px-2 py-0.5 bg-primary/15 text-primary text-xs rounded">CSS</span>
+                            <span class="px-2 py-0.5 bg-primary/15 text-primary text-xs rounded">JS</span>
+                        </div>
+
+                        <!-- Links -->
+                        <div class="flex gap-2 text-sm">
+                            <a class="text-primary hover:underline" href="<!-- ODKAZ -->" target="_blank">Demo →</a>
+                            <span class="text-secondary/30">|</span>
+                            <a class="text-primary hover:underline" href="<!-- GITHUB -->" target="_blank">Code →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="border border-secondary/10 rounded-lg overflow-hidden hover:border-primary/30 transition-all hover:shadow-lg hover:shadow-primary/10">
+                    <div class="relative bg-secondary/5 aspect-video overflow-hidden">
+                        <!-- IMAGE -->
+                        <div class="w-full h-full flex items-center justify-center text-secondary/30">
+                            <span class="text-4xl">🖼️</span>
+                        </div>
+                    </div>
+
+                    <div class="p-4">
+                        <h4 class="text-lg font-bold text-secondary mb-2"><!-- NÁZEV --></h4>
+                        <p class="text-sm text-paragraph mb-3"><!-- POPIS --></p>
+
+                        <div class="flex flex-wrap gap-1 mb-3">
+                            <span class="px-2 py-0.5 bg-primary/15 text-primary text-xs rounded"><!-- TECH --></span>
+                        </div>
+
+                        <div class="flex gap-2 text-sm">
+                            <a class="text-primary hover:underline" href="#" target="_blank">Demo →</a>
+                            <span class="text-secondary/30">|</span>
+                            <a class="text-primary hover:underline" href="#" target="_blank">Code →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Přidej další projekty podle potřeby -->
+            </div>
+        </section>
+
+        <!-- CYBERSECURITY PROJECTS -->
+        <section class="max-w-4xl mx-auto my-10">
+            <div class="flex align-middle mb-4">
+                <h3 class="text-2xl text-secondary"><span class="text-primary">#</span>Cybersecurity</h3>
+                <hr class="flex-grow border-t text-primary ml-4 mt-4">
+            </div>
+
+            <!-- LIST STYLE PROJECTS (pro cybersec experimenty) -->
+            <div class="space-y-3">
+                <!-- Project Item 1 -->
+                <div class="border border-secondary/10 rounded-lg p-4 hover:border-primary/30 transition-all hover:bg-secondary/5">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-2xl">
+                            🔐
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-lg font-bold text-secondary mb-1"><!-- NÁZEV PROJEKTU --></h4>
+                            <p class="text-sm text-paragraph mb-2">
+                                <!-- POPIS co jsi dělal, co jsi se naučil -->
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="px-2 py-0.5 bg-primary/15 text-primary text-xs rounded">Kali Linux</span>
+                                <span class="px-2 py-0.5 bg-primary/15 text-primary text-xs rounded">Metasploit</span>
+                            </div>
+                            <!-- Optional: Link na write-up -->
+                            <a class="text-primary text-sm hover:underline" href="#">Read more →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Item 2 -->
+                <div class="border border-secondary/10 rounded-lg p-4 hover:border-primary/30 transition-all hover:bg-secondary/5">
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-2xl">
+                            🛡️
+                        </div>
+                        <div class="flex-grow">
+                            <h4 class="text-lg font-bold text-secondary mb-1"><!-- NÁZEV --></h4>
+                            <p class="text-sm text-paragraph mb-2"><!-- POPIS --></p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-0.5 bg-primary/15 text-primary text-xs rounded"><!-- TECH --></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Přidej další -->
+            </div>
+        </section>
+
+        <!-- 3D & CREATIVE PROJECTS -->
+        <section class="max-w-4xl mx-auto my-10">
+            <div class="flex align-middle mb-4">
+                <h3 class="text-2xl text-secondary"><span class="text-primary">#</span>3D & Creative</h3>
+                <hr class="flex-grow border-t text-primary ml-4 mt-4">
+            </div>
+
+            <!-- MASONRY-STYLE GRID -->
+            <div class="grid md:grid-cols-3 gap-4">
+                <!-- Small Card 1 -->
+                <div class="border border-secondary/10 rounded-lg overflow-hidden hover:border-primary/30 transition-all">
+                    <div class="relative bg-secondary/5 aspect-square">
+                        <!-- OBRÁZEK 3D MODELU -->
+                        <div class="w-full h-full flex items-center justify-center text-secondary/30">
+                            <span class="text-4xl">🎨</span>
+                        </div>
+                    </div>
+                    <div class="p-3">
+                        <h4 class="text-sm font-bold text-secondary mb-1"><!-- NÁZEV --></h4>
+                        <p class="text-xs text-paragraph"><!-- KRÁTKÝ POPIS --></p>
+                    </div>
+                </div>
+
+                <!-- Small Card 2 -->
+                <div class="border border-secondary/10 rounded-lg overflow-hidden hover:border-primary/30 transition-all">
+                    <div class="relative bg-secondary/5 aspect-square">
+                        <div class="w-full h-full flex items-center justify-center text-secondary/30">
+                            <span class="text-4xl">🎨</span>
+                        </div>
+                    </div>
+                    <div class="p-3">
+                        <h4 class="text-sm font-bold text-secondary mb-1"><!-- NÁZEV --></h4>
+                        <p class="text-xs text-paragraph"><!-- POPIS --></p>
+                    </div>
+                </div>
+
+                <!-- Small Card 3 -->
+                <div class="border border-secondary/10 rounded-lg overflow-hidden hover:border-primary/30 transition-all">
+                    <div class="relative bg-secondary/5 aspect-square">
+                        <div class="w-full h-full flex items-center justify-center text-secondary/30">
+                            <span class="text-4xl">🎨</span>
+                        </div>
+                    </div>
+                    <div class="p-3">
+                        <h4 class="text-sm font-bold text-secondary mb-1"><!-- NÁZEV --></h4>
+                        <p class="text-xs text-paragraph"><!-- POPIS --></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LEARNING & EXPERIMENTS -->
+        <section class="max-w-4xl mx-auto my-10">
+            <div class="flex align-middle mb-4">
+                <h3 class="text-2xl text-secondary"><span class="text-primary">#</span>Learning & Experiments</h3>
+                <hr class="flex-grow border-t text-primary ml-4 mt-4">
+            </div>
+
+            <div class="grid gap-4">
+                <!-- Horizontal Card Style -->
+                <div class="border border-secondary/10 rounded-lg overflow-hidden hover:border-primary/30 transition-all">
+                    <div class="md:flex">
+                        <div class="md:w-1/3 bg-secondary/5 aspect-video md:aspect-auto">
+                            <!-- IMAGE nebo ikona -->
+                            <div class="w-full h-full flex items-center justify-center text-secondary/30">
+                                <span class="text-5xl">🧪</span>
+                            </div>
+                        </div>
+                        <div class="md:w-2/3 p-4">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="px-2 py-1 bg-primary/20 text-primary text-xs rounded-full font-bold">In Progress</span>
+                                <h4 class="text-lg font-bold text-secondary"><!-- NÁZEV EXPERIMENTU --></h4>
+                            </div>
+                            <p class="text-sm text-paragraph mb-3">
+                                <!-- POPIS čeho se učíš, co zkoušíš -->
+                            </p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="px-2 py-0.5 bg-primary/15 text-primary text-xs rounded"><!-- TECH --></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Další experimenty -->
+                <div class="border border-secondary/10 rounded-lg overflow-hidden hover:border-primary/30 transition-all">
+                    <div class="md:flex">
+                        <div class="md:w-1/3 bg-secondary/5 aspect-video md:aspect-auto">
+                            <div class="w-full h-full flex items-center justify-center text-secondary/30">
+                                <span class="text-5xl">🧪</span>
+                            </div>
+                        </div>
+                        <div class="md:w-2/3 p-4">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="px-2 py-1 bg-secondary/30 text-secondary text-xs rounded-full font-bold">Completed</span>
+                                <h4 class="text-lg font-bold text-secondary"><!-- NÁZEV --></h4>
+                            </div>
+                            <p class="text-sm text-paragraph mb-3"><!-- POPIS --></p>
+                            <div class="flex flex-wrap gap-1">
+                                <span class="px-2 py-0.5 bg-primary/15 text-primary text-xs rounded"><!-- TECH --></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<!--footer-->
+<footer class="bg-third text-secondary text-center p-4 mt-10 text-sm">
+    <p>Created by Jan Kaduch | <span id="year"></span></p>
+</footer>
+
+<script src="../main.js"></script>
 </body>
 </html>
