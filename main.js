@@ -36,13 +36,13 @@ function toggleTheme() {
         mobileIcon.textContent = (newTheme === 'dark') ? '🌙' : '☀️';
 
         if (newTheme === 'dark') {
-            headerIcon1.src = '../img/age_dark.png';
-            headerIcon2.src = '../img/experience_dark.png';
-            headerIcon3.src = '../img/location_dark.png';
+            headerIcon1.src = 'img/age_dark.png';
+            headerIcon2.src = 'img/experience_dark.png';
+            headerIcon3.src = 'img/location_dark.png';
         } else {
-            headerIcon1.src = '../img/age_light.png';
-            headerIcon2.src = '../img/experience_light.png';
-            headerIcon3.src = '../img/location_light.png';
+            headerIcon1.src = 'img/age_light.png';
+            headerIcon2.src = 'img/experience_light.png';
+            headerIcon3.src = 'img/location_light.png';
         }
     }
 
